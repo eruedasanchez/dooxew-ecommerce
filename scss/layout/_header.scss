@@ -1,0 +1,66 @@
+.header{
+    width: 100%;
+    background-color: $white; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-block: 15px;
+    z-index: 4;
+}
+
+.header .input-wrapper{
+    display: none;
+}
+
+/* Clase aplicada en js */
+.header.active{
+    position: fixed;
+    transform: translateY(-100%);
+    box-shadow: $shadow; 
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn{
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(0);}
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; 
+}
+
+.logo{
+    font-size: 2.8rem;
+    font-weight: $fw-700;
+}
+
+.header-action{
+    display: flex;
+    gap: 15px;
+}
+
+.header-action-btn{
+    position: relative;
+    font-size: 24px;
+    transition: $transition-1;
+}
+
+.header-action-btn:is(:hover, :focus){
+    color: $tan-crayola;
+}
+
+.header-action-btn .btn-badge{
+    width: 18px;
+    height: 18px;
+    background-color: $tan-crayola;
+    color: $white;
+    font-size: $fs-cart-notif;
+    font-weight: $fw-500;
+    position: absolute;
+    bottom: -8px;
+    right: -10px;
+    border-radius: 16px;
+}

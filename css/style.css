@@ -76,3 +76,65 @@ address {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #b3b3b3; }
+
+.container {
+  padding-inline: 15px; }
+
+.header {
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-block: 15px;
+  z-index: 4; }
+
+.header .input-wrapper {
+  display: none; }
+
+/* Clase aplicada en js */
+.header.active {
+  position: fixed;
+  transform: translateY(-100%);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease forwards; }
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0); } }
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; }
+
+.logo {
+  font-size: 2.8rem;
+  font-weight: 700; }
+
+.header-action {
+  display: flex;
+  gap: 15px; }
+
+.header-action-btn {
+  position: relative;
+  font-size: 24px;
+  transition: 0.25s ease; }
+
+.header-action-btn:is(:hover, :focus) {
+  color: #c58f63; }
+
+.header-action-btn .btn-badge {
+  width: 18px;
+  height: 18px;
+  background-color: #c58f63;
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 500;
+  position: absolute;
+  bottom: -8px;
+  right: -10px;
+  border-radius: 16px; }
