@@ -287,3 +287,36 @@ address {
 
 .hero-card .card-title:is(:hover, :focus) {
   color: #c58f63; }
+
+.about {
+  text-align: center; }
+
+.about .section-title {
+  font-family: "Mr De Haviland", cursive;
+  font-size: 5rem;
+  font-weight: 500; }
+
+.about .section-text {
+  margin-block: 12px 45px;
+  font-size: 1.2rem; }
+
+.about-card {
+  position: relative; }
+
+.about-card .img-cover {
+  transition: 0.5s ease; }
+
+.about-card:is(:hover, :focus) .img-cover {
+  transform: scale(1.1); }
+
+.about-card .play-btn {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  color: white;
+  font-size: 80px;
+  transition: 0.5s ease; }
+
+.about-card:is(:hover, :focus) .play-btn {
+  background-color: rgba(0, 0, 0, 0.4); }
