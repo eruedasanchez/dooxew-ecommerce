@@ -14,7 +14,7 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  background-color: var(--white);
+  background-color: white;
   color: black;
   font-size: 1.6rem;
   line-height: 1.7;
