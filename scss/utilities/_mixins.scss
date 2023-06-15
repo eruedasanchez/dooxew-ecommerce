@@ -1,0 +1,5 @@
+@mixin reset($margin, $padding, $boxsizing){
+    margin: $margin;
+    padding: $padding;
+    box-sizing: $boxsizing;
+}

@@ -1,0 +1,4 @@
+*, *::before, *::after{
+    @include reset(0, 0, border-box);
+}
+
