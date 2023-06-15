@@ -1,0 +1,17 @@
+html{
+    font-family: $font-roboto;
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--white);
+    color: $black;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    /* height: 400vh; */
+}
+
+body.active{
+    overflow: hidden;
+}
