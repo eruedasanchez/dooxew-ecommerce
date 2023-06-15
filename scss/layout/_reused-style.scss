@@ -1,3 +1,21 @@
 .container{
     padding-inline: 15px;
 }
+
+.social-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.social-list{
+    display: flex;
+    gap: 30px;
+}
+
+.social-link{
+    transition: $transition-1;
+}
+
+.social-link:is(:hover, :focus){
+    color: $tan-crayola;
+}

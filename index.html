@@ -40,7 +40,7 @@
                         <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
                         <span class="btn-badge">0</span>
                     </button>
-                    <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+                    <button id="nav-toggler-open-menu" class="header-action-btn" aria-label="open menu"> <!-- data-nav-toggler -->
                         <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
                     </button>
                 </div>
@@ -49,8 +49,8 @@
         <!-- Fin Header -->
 
         <!-- Inicio Sidebar -->
-        <div class="sidebar" data-navbar>
-            <button class="nav-close-btn" aria-label="close_menu" data-nav-toggler>
+        <div class="sidebar">  <!-- data-navbar -->
+            <button id="nav-toggler-close-menu" class="nav-close-btn" aria-label="close_menu"> <!-- data-nav-toggler -->
                 <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
             </button>
             <div class="wrapper">
@@ -69,17 +69,17 @@
             </div>
             <nav class="navbar">
                 <ul class="navbar-list">
-                    <li class="navbar-item"><a href="#home" class="navbar-link" data-nav-link>Home</a></li>
-                    <li class="navbar-item"><a href="#about" class="navbar-link" data-nav-link>About</a></li>
-                    <li class="navbar-item"><a href="#product" class="navbar-link" data-nav-link>Product</a></li>
-                    <li class="navbar-item"><a href="#blog" class="navbar-link" data-nav-link>Blogs</a></li>
+                    <li class="navbar-item"><a href="#home" class="navbar-link">Home</a></li>      <!--data-nav-link -->
+                    <li class="navbar-item"><a href="#about" class="navbar-link">About</a></li>     <!--data-nav-link -->
+                    <li class="navbar-item"><a href="#product" class="navbar-link">Product</a></li> <!--data-nav-link -->
+                    <li class="navbar-item"><a href="#blog" class="navbar-link">Blogs</a></li>      <!--data-nav-link -->
                 </ul>
             </nav>
             <ul class="contact-list">
                 <li><p class="contact-list-title">Contact Us</p></li>
-                <li class="contact-item"><address class="address">69 Halsey St, Ny 10002, New York, United States</address></li>
-                <li class="contact-item"><a href="#" class="contact-link">support.center@woodex.co</a></li>
-                <li class="contact-item"><a href="#" class="contact-link">(0000) 1235 567890</a></li>
+                <li class="contact-item"><address class="address">Avenida Rivadavia 5200, CABA, Argentina</address></li>
+                <li class="contact-item"><a href="#" class="contact-link">centro.soporte@dooxew.com.ar</a></li>
+                <li class="contact-item"><a href="#" class="contact-link">1123456789</a></li>
             </ul>
             <div class="social-wrapper">
                 <p class="social-list-title">Follow US On Socials</p>
@@ -90,7 +90,7 @@
                 </ul>
             </div>
         </div>
-        <div class="overlay" data-overlay data-nav-toggler></div>
+        <div id="nav-toggler-overlay" class="overlay"></div> <!-- nav-toggler-overlay por data-nav-toggler  y overlay por data-overlay-->
         <!-- Fin Sidebar -->
         
 

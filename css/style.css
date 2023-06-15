@@ -80,6 +80,20 @@ address {
 .container {
   padding-inline: 15px; }
 
+.social-wrapper {
+  display: flex;
+  align-items: center; }
+
+.social-list {
+  display: flex;
+  gap: 30px; }
+
+.social-link {
+  transition: 0.25s ease; }
+
+.social-link:is(:hover, :focus) {
+  color: #c58f63; }
+
 .header {
   width: 100%;
   background-color: white;
@@ -138,3 +152,89 @@ address {
   bottom: -8px;
   right: -10px;
   border-radius: 16px; }
+
+.sidebar {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: -425px;
+  max-width: 425px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 40px;
+  padding-block-end: 100px;
+  overflow-y: auto;
+  z-index: 5;
+  transition: 0.25s cubic-bezier(0.51, 0.03, 0.64, 0.28); }
+
+.sidebar.active {
+  transform: translateX(-425px);
+  visibility: visible;
+  transition: 0.5s cubic-bezier(0.33, 0.85, 0.4, 0.96); }
+
+.nav-close-btn {
+  font-size: 30px; }
+
+.sidebar .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-block: 40px 75px; }
+
+.sidebar-list-title, .contact-list-title, .social-list-title {
+  color: #666666;
+  font-weight: 500;
+  font-size: 1.4rem; }
+
+.sidebar-list-title {
+  margin-block-end: 15px; }
+
+.sidebar-link {
+  color: #121212;
+  margin-block-start: 6px;
+  transition: 0.25s ease;
+  font-size: 1.2rem; }
+
+.sidebar-link:is(:hover, :focus) {
+  color: #c58f63; }
+
+.navbar {
+  margin-block-end: 60px; }
+
+.navbar-item:not(:last-child) {
+  margin-block-end: 15px; }
+
+.navbar-link {
+  font-weight: 500;
+  font-size: 1.4rem;
+  transition: 0.25s ease; }
+
+.navbar-link:is(:hover, :focus) {
+  color: #666666; }
+
+.address, .contact-link {
+  color: #121212;
+  font-size: 1.2rem; }
+
+.sidebar .address {
+  margin-block-start: 20px; }
+
+.social-wrapper {
+  justify-content: space-between;
+  margin-block-start: 50px; }
+
+.social-list-title {
+  font-size: 1.2rem; }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 4;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease; }
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all; }
