@@ -56,8 +56,3 @@ window.addEventListener('scroll', () => {
     showElementOnScroll();  
 });
 
-
-
-
-
-
