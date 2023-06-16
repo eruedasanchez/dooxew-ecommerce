@@ -189,24 +189,24 @@
                             <h2 class="h2 section-title">Popular Products</h2>
                             <ul class="filter-btn-list">
                                 <li class="filter-btn-item">
-                                    <button class="filter-btn active" data-filter-btn="all">All products</button>
+                                    <button id="all" class="filter-btn active">All products</button>  <!-- data-filter-btn="all" -->
                                 </li>
                                 <li class="filter-btn-item">
-                                    <button class="filter-btn" data-filter-btn="accesory">Accesory</button>
+                                    <button id="accesories" class="filter-btn">Accesory</button> <!-- data-filter-btn="accesory" -->
                                 </li>
                                 <li class="filter-btn-item">
-                                    <button class="filter-btn" data-filter-btn="decoration">Decoration</button>
+                                    <button id="decorations" class="filter-btn">Decoration</button> <!-- data-filter-btn="decoration"-->
                                 </li>
                                 <li class="filter-btn-item">
-                                    <button class="filter-btn" data-filter-btn="furniture">Furniture</button>
+                                    <button id="furnitures" class="filter-btn">Furniture</button> <!-- data-filter-btn="furniture" -->
                                 </li>
                             </ul>
                         </div>
-                        <ul id="data-filter" class="grid-list product-list" data-filter="all"> <!--data-filter="all"-->
+                        <ul id="data-filter" class="grid-list product-list"> <!--data-filter="all"-->
                             <li class="decoration">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-1.jpg" width="300" height="300" loading="lazy" alt="Animi Dolor Pariatur" class="img-cover">
+                                        <img src="./assets/img/decoration-01.jpg" width="300" height="300" loading="lazy" alt="Animi Dolor Pariatur" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -250,7 +250,7 @@
                             <li class="accesory">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-2.jpg" width="300" height="300" loading="lazy" alt="Art Deco Home" class="img-cover">
+                                        <img src="./assets/img/accesory-1.jpg" width="300" height="300" loading="lazy" alt="Art Deco Home" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -285,7 +285,7 @@
                             <li class="decoration">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-3.jpg" width="300" height="300" loading="lazy" alt="Artificial potted plant" class="img-cover">
+                                        <img src="./assets/img/decoration-02.jpg" width="300" height="300" loading="lazy" alt="Artificial potted plant" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -319,7 +319,7 @@
                             <li class="accesory">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-4.jpg" width="300" height="300" loading="lazy" alt="Dark green jug" class="img-cover">
+                                        <img src="./assets/img/accesory-2.jpg" width="300" height="300" loading="lazy" alt="Dark green jug" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -344,7 +344,7 @@
                                             <a href="#" class="card-title">Dark green jug</a>
                                         </h3>
                                         <div class="card-price">
-                                            <data class="price" value="17.10">$17.10</data>
+                                            <data class="price" value="17">$17.00</data>
                                         </div>
                                     </div>
                                 </div>
@@ -353,7 +353,7 @@
                             <li class="accesory">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-5.jpg" width="300" height="300" loading="lazy" alt="Drinking glasses" class="img-cover">
+                                        <img src="./assets/img/accesory-3.jpg" width="300" height="300" loading="lazy" alt="Drinking glasses" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -378,7 +378,7 @@
                                             <a href="#" class="card-title">Drinking glasses</a>
                                         </h3>
                                         <div class="card-price">
-                                            <data class="price" value="21.00">$21.10</data>
+                                            <data class="price" value="21.00">$21.00</data>
                                         </div>
                                     </div>
                                 </div>
@@ -387,7 +387,7 @@
                             <li class="furniture">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-6.jpg" width="300" height="300" loading="lazy" alt="Helen chair" class="img-cover">
+                                        <img src="./assets/img/furniture-01.jpg" width="300" height="300" loading="lazy" alt="Helen chair" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -412,7 +412,7 @@
                                             <a href="#" class="card-title">Helen chair</a>
                                         </h3>
                                         <div class="card-price">
-                                            <data class="price" value="69.50">$69.50</data>
+                                            <data class="price" value="69">$69.00</data>
                                         </div>
                                     </div>
                                 </div>
@@ -421,7 +421,7 @@
                             <li class="accesory">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-7.jpg" width="300" height="300" loading="lazy" alt="High Quality Glass Bottle" class="img-cover">
+                                        <img src="./assets/img/accesory-4.jpg" width="300" height="300" loading="lazy" alt="High Quality Glass Bottle" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -446,7 +446,7 @@
                                             <a href="#" class="card-title">High Quality Glass Bottle</a>
                                         </h3>
                                         <div class="card-price">
-                                            <data class="price" value="30.10">$30.10</data>
+                                            <data class="price" value="30">$30</data>
                                         </div>
                                     </div>
                                 </div>
@@ -455,7 +455,7 @@
                             <li class="accesory">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-8.jpg" width="300" height="300" loading="lazy" alt="Nancy chair" class="img-cover">
+                                        <img src="./assets/img/accesory-5.jpg" width="300" height="300" loading="lazy" alt="Nancy chair" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -477,10 +477,10 @@
 
                                     <div class="card-content">
                                         <h3 class="h3">
-                                            <a href="#" class="card-title">High Quality Glass Bottle</a>
+                                            <a href="#" class="card-title">Living Room & Bedroom Lights</a>
                                         </h3>
                                         <div class="card-price">
-                                            <data class="price" value="30.10">$30.10</data>
+                                            <data class="price" value="45">$45.00</data>
                                         </div>
                                     </div>
                                 </div>
@@ -489,7 +489,7 @@
                             <li class="furniture">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-9.jpg" width="300" height="300" loading="lazy" alt="Nancy chair" class="img-cover">
+                                        <img src="./assets/img/furniture-02.jpg" width="300" height="300" loading="lazy" alt="Nancy chair" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -514,7 +514,7 @@
                                             <a href="#" class="card-title">Nancy chair</a>
                                         </h3>
                                         <div class="card-price">
-                                            <data class="price" value="90.00">$90.00</data>
+                                            <data class="price" value="90">$90.00</data>
                                         </div>
                                     </div>
                                 </div>
@@ -523,7 +523,7 @@
                             <li class="furniture">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-10.jpg" width="300" height="300" loading="lazy" alt="Simple chair" class="img-cover">
+                                        <img src="./assets/img/furniture-03.jpg" width="300" height="300" loading="lazy" alt="Simple chair" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -548,7 +548,7 @@
                                             <a href="#" class="card-title">Simple chair</a>
                                         </h3>
                                         <div class="card-price">
-                                            <data class="price" value="40.00">$40.00</data>
+                                            <data class="price" value="40">$40.00</data>
                                         </div>
                                     </div>
                                 </div>
@@ -557,7 +557,7 @@
                             <li class="decoration">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-11.jpg" width="300" height="300" loading="lazy" alt="Smooth disk" class="img-cover">
+                                        <img src="./assets/img/decoration-03.jpg" width="300" height="300" loading="lazy" alt="Smooth disk" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -659,7 +659,7 @@
                             <li class="accesory">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-14.jpg" width="300" height="300" loading="lazy" alt="Teapot with black tea" class="img-cover">
+                                        <img src="./assets/img/accesory-06.jpg" width="300" height="300" loading="lazy" alt="Teapot with black tea" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -684,7 +684,7 @@
                                             <a href="#" class="card-title">Teapot with black tea</a>
                                         </h3>
                                         <div class="card-price">
-                                            <data class="price" value="25.00">$25.00</data>
+                                            <data class="price" value="25">$25.00</data>
                                         </div>
                                     </div>
                                 </div>
@@ -693,7 +693,7 @@
                             <li class="decoration">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-15.jpg" width="300" height="300" loading="lazy" alt="Unique decoration" class="img-cover">
+                                        <img src="./assets/img/decoration-04.jpg" width="300" height="300" loading="lazy" alt="Unique decoration" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -727,7 +727,7 @@
                             <li class="decoration">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-16.jpg" width="300" height="300" loading="lazy" alt="Vase of flowers" class="img-cover">
+                                        <img src="./assets/img/decoration-05.jpg" width="300" height="300" loading="lazy" alt="Vase of flowers" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -752,7 +752,7 @@
                                             <a href="#" class="card-title">Vase of flowers</a>
                                         </h3>
                                         <div class="card-price">
-                                            <data class="price" value="77.00">$77.00</data>
+                                            <data class="price" value="77">$77.00</data>
                                         </div>
                                     </div>
                                 </div>
@@ -761,7 +761,7 @@
                             <li class="decoration">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-17.jpg" width="300" height="300" loading="lazy" alt="Wood Eggs" class="img-cover">
+                                        <img src="./assets/img/decoration-06.jpg" width="300" height="300" loading="lazy" alt="Wood Eggs" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -786,7 +786,7 @@
                                             <a href="#" class="card-title">Wood Eggs</a>
                                         </h3>
                                         <div class="card-price">
-                                            <data class="price" value="19.00">$19.00</data>
+                                            <data class="price" value="19">$19.00</data>
                                         </div>
                                     </div>
                                 </div>
@@ -795,7 +795,7 @@
                             <li class="decoration">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-18.jpg" width="300" height="300" loading="lazy" alt="Wooden Box" class="img-cover">
+                                        <img src="./assets/img/decoration-07.jpg" width="300" height="300" loading="lazy" alt="Wooden Box" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
@@ -820,7 +820,7 @@
                                             <a href="#" class="card-title">Wooden Box</a>
                                         </h3>
                                         <div class="card-price">
-                                            <data class="price" value="27.00">$27.00</data>
+                                            <data class="price" value="27">$27.00</data>
                                         </div>
                                     </div>
                                 </div>
@@ -829,7 +829,7 @@
                             <li class="accesory">
                                 <div class="product-card">
                                     <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                                        <img src="./assets/img/product-19.jpg" width="300" height="300" loading="lazy" alt="Wooden Cups" class="img-cover">
+                                        <img src="./assets/img/accesory-07.jpg" width="300" height="300" loading="lazy" alt="Wooden Cups" class="img-cover">
                                         <ul class="card-action-list">
                                             <li>
                                                 <button class="card-action-btn" aria-label="add to cart" title="add to cart">
