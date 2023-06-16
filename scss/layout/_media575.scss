@@ -1,0 +1,91 @@
+@media (min-width: 575px){
+    /* REUSED STYLE */
+    .container{
+        max-width: 575px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .grid-list{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+    }
+
+    .grid-list > li:last-child{
+        grid-column: span 2;
+        max-width: calc(50% - 12.5px);
+        width: 100%;
+        margin-inline: auto;
+    }
+    
+    /* ABOUT */
+    .card-meta-item{
+        font-size: $fs-7;
+    }
+    
+    /* HEADER */
+    .header .container{
+        gap: 35px;
+    }
+
+    .header .input-wrapper{
+        display: block;
+        position: relative;
+    }
+
+    .header .input-field{
+        padding-block: 10px;
+        padding-inline-end: 30px;
+        border-block-end: 1px solid $black_25;
+        outline: none;
+        transition: $transition-1;
+        font-size: $fs-6;
+    }
+
+    .header .input-field::-webkit-search-cancel-button{
+        display: none;
+    }
+
+    .header .input-field:focus{
+        border-block-end-color: $tan-crayola;
+    }
+
+    .header .input-wrapper ion-icon{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        font-size: 20px;
+    }
+
+    .header-action{
+        gap: 25px;
+    }
+
+    /* NEWSLETTER */
+    .newsletter{
+        background: none;
+    }
+
+    .newsletter-card{
+        background-color: $cultured;
+        padding: 20px 30px;
+    }
+
+    /* FOOTER */
+    .footer-top{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-list-item ion-icon, .social-link{
+        font-size: 19px;
+    }
+
+    .footer-list-title{
+        font-size: $fs-6;
+    }
+
+    .footer-list-item .address, .footer-link{
+        font-size: $fs-7;
+    }
+}
