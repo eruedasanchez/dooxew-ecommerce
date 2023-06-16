@@ -733,3 +733,51 @@ a.card-meta-text:is(:hover, :focus) {
     font-size: 1.2rem; }
   .footer-list-item .address, .footer-link {
     font-size: 1rem; } }
+
+@media (min-width: 768px) {
+  /* REUSED STYLE */
+  .container {
+    max-width: 768px; }
+  /*  HEADER */
+  .header-action {
+    gap: 30px; }
+  .header-action-btn {
+    font-size: 30px; }
+  .header .input-wrapper {
+    width: 240px; }
+  .header .input-field {
+    font-size: 1.4rem; }
+  .header-action-btn .btn-badge {
+    width: 26px;
+    height: 26px;
+    font-size: 1rem;
+    border-radius: 20px;
+    bottom: -15.5px;
+    right: -12px; }
+  /* HERO */
+  .hero-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; }
+  .hero-list .colspan-2 {
+    grid-column: span 2; }
+  .hero-card .card-title {
+    font-size: 1.2rem; }
+  .hero-card .card-text {
+    font-size: 1rem; }
+  /* ABOUT */
+  .about .section-text {
+    margin-block-end: 75px; }
+  /* PRODUCT */
+  .product .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 80px; }
+  .product .section-title {
+    font-size: 1.8rem; }
+  .filter-btn-list {
+    margin: 0;
+    font-size: 1.2rem; }
+  /* NEWSLETTER */
+  .newsletter-card {
+    padding: 50px 70px; } }
