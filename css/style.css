@@ -547,3 +547,48 @@ address {
 
 a.card-meta-text:is(:hover, :focus) {
   color: #c58f63; }
+
+.newsletter {
+  height: 270px;
+  --section-padding: 20px;
+  background-color: #f3f4f6; }
+
+.newsletter-card {
+  padding-inline: 15px; }
+
+.newsletter-card .card-content {
+  margin-block-end: 40px; }
+
+.newsletter-card .section-title {
+  margin-block-end: 8px; }
+
+.newsletter-card .h2 {
+  font-size: 2.5rem; }
+
+.card-content .section-text {
+  font-size: 1.2rem;
+  color: #121212; }
+
+.newsletter .card-form {
+  position: relative; }
+
+.newsletter-card .email-field {
+  background-color: white;
+  padding-block: 14px;
+  padding-inline: 20px 50px;
+  outline: 3px solid transparent;
+  outline-offset: 0;
+  transition: 0.25s ease; }
+
+.newsletter-card .email-field:focus {
+  outline-color: rgba(0, 0, 0, 0.25); }
+
+.email-field {
+  font-size: 1.1rem; }
+
+.newsletter-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding-inline: 20px; }
