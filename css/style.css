@@ -656,3 +656,22 @@ a.card-meta-text:is(:hover, :focus) {
 
 .copyright-link {
   display: inline-block; }
+
+.back-top-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  background-color: #c58f63;
+  color: white;
+  font-size: 20px;
+  padding: 14px;
+  border-radius: 50%;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s ease; }
+
+.back-top-btn.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-10px); }
