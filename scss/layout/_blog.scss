@@ -1,0 +1,86 @@
+.blog .title-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px 50px;
+    margin-block-end: 50px;
+}
+
+.title-wrapper h2{
+    font-size: $fs-3;
+}
+
+.blog .btn-link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: $fs-5;
+    color: $smokey-black;
+    transition: $transition-1;
+}
+
+.blog .btn-link:is(:hover, :focus){
+    color: $tan-crayola;
+}
+
+.blog-card .card-banner{
+    position: relative;
+}
+
+.blog-card .card-btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 15px;
+    transform: translateX(100%);
+    transition: $transition-2;
+}
+
+.blog-card:is(:hover, :focus) .card-btn{
+    transform: translateX(0);
+}
+
+.blog-card .card-btn .span{
+    font-size: $fs-6;
+}
+
+.blog-card .card-title{
+    margin-block: 20px 10px;
+    transition: $transition-1;
+    font-size: $fs-5;
+}
+
+.blog-card .card-title:is(:hover, :focus){
+    color: $tan-crayola;
+}
+
+.blog-card .card-meta-list{
+    display: flex;
+    align-items: center;
+}
+
+.card-meta-item{
+    position: relative;
+    color: $granite-gray;
+    font-size: $fs-6m;
+}
+
+.card-meta-item:not(:last-child)::after{
+    content: "/";
+    margin-inline: 8px;
+    color: $spanish-gray;
+}
+
+.card-meta-text{
+    display: inline-block;
+    color: $black;
+    transition: $transition-1;
+}
+
+a.card-meta-text:is(:hover, :focus){
+    color: $tan-crayola;
+}

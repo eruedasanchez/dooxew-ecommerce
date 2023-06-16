@@ -475,3 +475,75 @@ address {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
+.blog .title-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px 50px;
+  margin-block-end: 50px; }
+
+.title-wrapper h2 {
+  font-size: 2rem; }
+
+.blog .btn-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  color: #121212;
+  transition: 0.25s ease; }
+
+.blog .btn-link:is(:hover, :focus) {
+  color: #c58f63; }
+
+.blog-card .card-banner {
+  position: relative; }
+
+.blog-card .card-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 15px;
+  transform: translateX(100%);
+  transition: 0.5s ease; }
+
+.blog-card:is(:hover, :focus) .card-btn {
+  transform: translateX(0); }
+
+.blog-card .card-btn .span {
+  font-size: 1.2rem; }
+
+.blog-card .card-title {
+  margin-block: 20px 10px;
+  transition: 0.25s ease;
+  font-size: 1.4rem; }
+
+.blog-card .card-title:is(:hover, :focus) {
+  color: #c58f63; }
+
+.blog-card .card-meta-list {
+  display: flex;
+  align-items: center; }
+
+.card-meta-item {
+  position: relative;
+  color: #666666;
+  font-size: 1.1rem; }
+
+.card-meta-item:not(:last-child)::after {
+  content: "/";
+  margin-inline: 8px;
+  color: #999999; }
+
+.card-meta-text {
+  display: inline-block;
+  color: black;
+  transition: 0.25s ease; }
+
+a.card-meta-text:is(:hover, :focus) {
+  color: #c58f63; }
