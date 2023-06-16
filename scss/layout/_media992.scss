@@ -1,0 +1,48 @@
+@media (min-width: 992px){
+
+    /* REUSED STYLE */
+    .container{
+        max-width: 992px;
+    }
+
+    .grid-list > li:last-child{
+        all: unset;
+    }
+
+    .grid-list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* ABOUT */
+    .about .section-text{
+        max-width: 85ch;
+        margin-inline: auto;
+    }
+
+    /* NEWSLETTER */
+
+    .newsletter{
+        --section-padding:50px;
+    }
+
+    .newsletter-card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .newsletter-card .card-content{
+        margin-block-end: 0;
+    }
+
+    /* FOOTER */
+    .footer-top{
+        grid-template-columns: 0.6fr 0.75fr 0.4fr 0.5fr;
+        padding-block-end: 60px;
+    }
+
+    .footer-form .email-field{
+        font-size: $fs-7;
+    }
+}
