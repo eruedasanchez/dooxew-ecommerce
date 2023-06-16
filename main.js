@@ -248,3 +248,20 @@ window.addEventListener('scroll', () => {
     showElementOnScroll();  
 });
 
+/**** Product filter ****/
+
+btnCategory.forEach(btn => {
+    btn.addEventListener("click", (event) => {
+        btnCategory.forEach(btn => btn.classList.remove("active"));  
+        event.currentTarget.classList.add("active");                
+        
+        /* Filter products by category */
+        if(event.currentTarget.id != "all"){
+        const selected = products.filter(product => product.categoryId === event.currentTarget.id);
+        load(selected);
+        } else{
+        load(products);                                   
+        }
+    })
+});
+
