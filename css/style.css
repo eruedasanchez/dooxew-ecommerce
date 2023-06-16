@@ -592,3 +592,67 @@ a.card-meta-text:is(:hover, :focus) {
   right: 0;
   bottom: 0;
   padding-inline: 20px; }
+
+.footer-top {
+  display: grid;
+  gap: 30px;
+  padding-block-end: 40px; }
+
+.footer-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; }
+
+.footer-list-item ion-icon, .social-link {
+  font-size: 24px; }
+
+.footer-link {
+  padding-block: 4px;
+  transition: 0.25s ease;
+  font-size: 1.2rem;
+  color: #666666; }
+
+.footer-link:is(:hover, :focus) {
+  color: #c58f63; }
+
+.footer-brand .social-list {
+  margin-block-start: 30px; }
+
+.footer-list-title {
+  color: #121212;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-block-end: 15px; }
+
+.footer-form {
+  position: relative; }
+
+.footer .email-field {
+  padding-block: 10px;
+  padding-inline-end: 35px;
+  border-block-end: 1px solid rgba(0, 0, 0, 0.25);
+  outline: none; }
+
+.footer .email-field:focus {
+  border-color: #c58f63; }
+
+.footer-form-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 20px;
+  color: #666666; }
+
+.footer-list .wrapper {
+  display: flex;
+  gap: 20px;
+  margin-block-start: 20px; }
+
+.copyright {
+  text-align: center;
+  padding-block: 20px;
+  font-size: 1rem; }
+
+.copyright-link {
+  display: inline-block; }

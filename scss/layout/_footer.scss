@@ -1,0 +1,77 @@
+.footer-top{
+    display: grid;
+    gap: 30px;
+    padding-block-end: 40px;
+}
+
+.footer-list-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-list-item ion-icon, .social-link{
+    font-size: 24px;
+}
+
+.footer-link{
+    padding-block: 4px;
+    transition: $transition-1;
+    font-size: $fs-6;
+    color: $granite-gray;
+}
+
+.footer-link:is(:hover, :focus){
+    color: $tan-crayola;
+}
+
+.footer-brand .social-list{
+    margin-block-start: 30px;
+}
+
+.footer-list-title{
+    color: $smokey-black;
+    font-size: $fs-5;
+    font-weight: $fw-500;
+    margin-block-end: 15px;
+}
+
+.footer-form{
+    position: relative;
+}
+
+.footer .email-field{
+    padding-block: 10px;
+    padding-inline-end: 35px;
+    border-block-end: 1px solid $black_25;
+    outline: none;
+}
+
+.footer .email-field:focus{
+    border-color: $tan-crayola;
+}
+
+.footer-form-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+    color: $granite-gray;
+}
+
+.footer-list .wrapper{
+    display: flex;
+    gap: 20px;
+    margin-block-start: 20px;
+}
+
+.copyright{
+    text-align: center;
+    padding-block: 20px;
+    font-size: $fs-7;
+}
+
+.copyright-link{
+    display: inline-block;
+}
