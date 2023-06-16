@@ -810,3 +810,21 @@ a.card-meta-text:is(:hover, :focus) {
     padding-block-end: 60px; }
   .footer-form .email-field {
     font-size: 1rem; } }
+
+@media (min-width: 1200px) {
+  /* REUSED STYLE */
+  .container {
+    max-width: 1200px; }
+  /* HEADER */
+  .header .input-wrapper {
+    width: 290px; }
+  .header .input-field {
+    font-size: 1.4rem; }
+  /* PRODUCT */
+  .product-list {
+    grid-template-columns: repeat(4, 1fr); }
+  /* HERO */
+  .hero-card .card-title {
+    font-size: 1.8rem; }
+  .hero-card .card-text {
+    font-size: 1.4rem; } }
