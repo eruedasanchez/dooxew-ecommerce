@@ -458,24 +458,6 @@ address {
 .product-card .card-price .del {
   color: #999999; }
 
-.product-list > * {
-  display: none; }
-
-.product-list[data-filter="all"] > *,
-.product-list[data-filter="accesory"] > .accesory,
-.product-list[data-filter="decoration"] > .decoration,
-.product-list[data-filter="furniture"] > .furniture {
-  display: block;
-  animation: fadeUp 1s ease forwards; }
-
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(10px); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
-
 .blog .title-wrapper {
   display: flex;
   flex-wrap: wrap;

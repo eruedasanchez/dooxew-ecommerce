@@ -13,50 +13,182 @@ class Product{
 
 const products = [];
 
-const firstAccesory = new Product("Animi dolor pariatur", "accesory-01", "./assets/img/accesory-01.jpg", "Accesory", "accesories", 30);
-const secondAccesory = new Product("Dark green jug", "accesory-02", "./assets/img/accesory-02.jpg", "Accesory", "accesories", 17);
-const thirdAccesory = new Product("Drinking glasses", "accesory-03", "./assets/img/accesory-03.jpg", "Accesory", "accesories", 21); 
-const fourthAccesory = new Product("High Quality Glass Bottle", "accesory-04", "./assets/img/accesory-04.jpg", "Accesory", "accesories", 30);
-const fifthAccesory = new Product("Living Room & Bedroom Lights", "accesory-05", "./assets/img/accesory-05.jpg", "Accesory", "accesories", 45);
-const sixthAccesory = new Product("Teapot with black tea", "accesory-06", "./assets/img/accesory-06.jpg", "Accesory", "accesories", 25);
-const seventhAccesory = new Product("Wooden Cups", "accesory-07", "./assets/img/accesory-07.jpg", "Accesory", "accesories", 29);
+const firstAccesory = new Product("Art Deco Home", "accesory-01", "./assets/img/accesory-01.jpg", "accesory", "accesories", 30);
+const secondAccesory = new Product("Dark Green Jug", "accesory-02", "./assets/img/accesory-02.jpg", "accesory", "accesories", 17);
+const thirdAccesory = new Product("Drinking Glasses", "accesory-03", "./assets/img/accesory-03.jpg", "accesory", "accesories", 21); 
+const fourthAccesory = new Product("High Quality Glass Bottle", "accesory-04", "./assets/img/accesory-04.jpg", "accesory", "accesories", 30);
+const fifthAccesory = new Product("Living Room & Bedroom Lights", "accesory-05", "./assets/img/accesory-05.jpg", "accesory", "accesories", 45);
+const sixthAccesory = new Product("Teapot With Black Tea", "accesory-06", "./assets/img/accesory-06.jpg", "accesory", "accesories", 25);
+const seventhAccesory = new Product("Wooden Cups", "accesory-07", "./assets/img/accesory-07.jpg", "accesory", "accesories", 29);
 
-const firstDecoration = new Product("Animi dolor pariatur", "decoration-01", "./assets/img/decoration-01.jpg", "Decoration", "decorations", 10);
-const secondDecoration = new Product("Artificial potted plant", "decoration-02", "./assets/img/decoration-02.jpg", "Decoration", "decorations", 40);
-const thirdDecoration = new Product("Smooth disk", "decoration-03", "./assets/img/decoration-03.jpg", "Decoration", "decorations", 46);
-const fourthDecoration = new Product("Unique decoration", "decoration-04", "./assets/img/decoration-04.jpg", "Decoration", "decorations", 15);
-const fifthecoration = new Product("Vase of flowers", "decoration-05", "./assets/img/decoration-05.jpg", "Decoration", "decorations", 77);
-const sixthDecoration = new Product("Wood Eggs", "decoration-06", "./assets/img/decoration-06.jpg", "Decoration", "decorations", 19);
-const seventhDecoration = new Product("Wooden Box", "decoration-07", "./assets/img/decoration-07.jpg", "Decoration", "decorations", 27);
+const firstDecoration = new Product("Animi Dolor Pariatur", "decoration-01", "./assets/img/decoration-01.jpg", "decoration", "decorations", 10);
+const secondDecoration = new Product("Artificial Potted Plant", "decoration-02", "./assets/img/decoration-02.jpg", "decoration", "decorations", 40);
+const thirdDecoration = new Product("Smooth Disk", "decoration-03", "./assets/img/decoration-03.jpg", "decoration", "decorations", 46);
+const fourthDecoration = new Product("Unique Decoration", "decoration-04", "./assets/img/decoration-04.jpg", "decoration", "decorations", 15);
+const fifthecoration = new Product("Vase Of Flowers", "decoration-05", "./assets/img/decoration-05.jpg", "decoration", "decorations", 77);
+const sixthDecoration = new Product("Wood Eggs", "decoration-06", "./assets/img/decoration-06.jpg", "decoration", "decorations", 19);
+const seventhDecoration = new Product("Wooden Box", "decoration-07", "./assets/img/decoration-07.jpg", "decoration", "decorations", 27);
 
-const firstFurniture = new Product("Helen chair", "furniture-01", "./assets/img/furniture-01.jpg", "Furniture", "furnitures", 69);
-const secondFurniture = new Product("Nancy chair", "furniture-02", "./assets/img/furniture-02.jpg", "Furniture", "furnitures", 90);
-const thirdFurniture = new Product("Simple chair", "furniture-03", "./assets/img/furniture-03.jpg", "Furniture", "furnitures", 40);
-const fourthFurniture = new Product("Table Black", "furniture-04", "./assets/img/furniture-04.jpg", "Furniture", "furnitures", 67);
-const fifthFurniture = new Product("Table wood pine", "furniture-05", "./assets/img/furniture-05.jpg", "Furniture", "furnitures", 50);
-
-products.push(firstAccesory);
-products.push(secondAccesory);
-products.push(thirdAccesory);
-products.push(fourthAccesory);
-products.push(fifthAccesory);
-products.push(sixthAccesory);
-products.push(seventhAccesory);
+const firstFurniture = new Product("Helen Chair", "furniture-01", "./assets/img/furniture-01.jpg", "furniture", "furnitures", 69);
+const secondFurniture = new Product("Nancy Chair", "furniture-02", "./assets/img/furniture-02.jpg", "furniture", "furnitures", 90);
+const thirdFurniture = new Product("Simple Chair", "furniture-03", "./assets/img/furniture-03.jpg", "furniture", "furnitures", 40);
+const fourthFurniture = new Product("Table Black", "furniture-04", "./assets/img/furniture-04.jpg", "furniture", "furnitures", 67);
+const fifthFurniture = new Product("Table Wood Pine", "furniture-05", "./assets/img/furniture-05.jpg", "furniture", "furnitures", 50);
 
 products.push(firstDecoration);
+products.push(firstAccesory);
 products.push(secondDecoration);
-products.push(thirdDecoration);
-products.push(fourthDecoration);
-products.push(fifthecoration);
-products.push(sixthDecoration);
-products.push(seventhDecoration);
+products.push(secondAccesory);
 
+products.push(thirdAccesory);
 products.push(firstFurniture);
+products.push(fourthAccesory);
+products.push(fifthAccesory);
+
 products.push(secondFurniture);
 products.push(thirdFurniture);
+products.push(thirdDecoration);
 products.push(fourthFurniture);
-products.push(fifthFurniture);
 
+products.push(fifthFurniture);
+products.push(sixthAccesory);
+products.push(fourthDecoration);
+products.push(fifthecoration);
+
+products.push(sixthDecoration);
+products.push(seventhDecoration);
+products.push(seventhAccesory);
+
+/* Load products */
+
+const btnCategory = document.querySelectorAll(".filter-btn");
+const productsContainer = document.querySelector("#data-filter");
+// const mainTitle = document.querySelector("#main-title");
+// let btnAdd = document.querySelectorAll(".add-product");   // Seleccion de todos los botones "add"
+// const quantity = document.querySelector("#quantity");
+
+const load = (productsChosen) => {
+    productsContainer.innerHTML = "";           // Vacia el contenedor para que no vaya acumulando las categorias filtradas dado que se le aplica un append 
+    
+    productsChosen.forEach(product => {
+        const li = document.createElement("li");
+        const productCat = product.categoryName; 
+        li.classList.add(productCat);
+        if(product.id === "decoration-01"){
+            li.innerHTML = `
+            <div class="product-card">
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                    <img src="${product.image}" width="300" height="300" loading="lazy" alt="${product.name}" class="img-cover">
+                    <ul class="card-action-list">
+                        <li>
+                            <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                                <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                                <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                            </button>
+                        </li>
+                    </ul>
+
+                    <ul class="badge-list">
+                        <li>
+                            <div class="badge orange">Sale</div>
+                        </li>
+                        <li>
+                            <div class="badge cyan">-10%</div>
+                        </li>
+                    </ul>
+                </a>
+
+                <div class="card-content">
+                    <h3 class="h3">
+                        <a href="#" class="card-title">${product.name}</a>
+                    </h3>
+                    <div class="card-price">
+                        <del class="del">$19.00</del>
+                        <data class="price" value="${product.price}">$${product.price}.00</data>
+                    </div>
+                </div>
+            </div>
+            `;
+        } else if(product.id === "accesory-01"){
+            li.innerHTML = `
+            <div class="product-card">
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                    <img src="${product.image}" width="300" height="300" loading="lazy" alt="${product.name}" class="img-cover">
+                    <ul class="card-action-list">
+                        <li>
+                            <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                                <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                                <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="card-badge">Out of stock</div>
+                </a>
+
+                <div class="card-content">
+                    <h3 class="h3">
+                        <a href="#" class="card-title">${product.name}</a>
+                    </h3>
+                    <div class="card-price">
+                        <data class="price" value="${product.price}">$${product.price}.00</data>
+                    </div>
+                </div>
+            </div>
+        `;
+        } else {
+            li.innerHTML = `
+                <div class="product-card">
+                    <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                        <img src="${product.image}" width="300" height="300" loading="lazy" alt="${product.name}" class="img-cover">
+                        <ul class="card-action-list">
+                            <li>
+                                <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                                    <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                                    <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                                </button>
+                            </li>
+                        </ul>
+                    </a>
+
+                    <div class="card-content">
+                        <h3 class="h3">
+                            <a href="#" class="card-title">${product.name}</a>
+                        </h3>
+                        <div class="card-price">
+                            <data class="price" value="${product.price}">$${product.price}.00</data>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        productsContainer.append(li);
+    })
+    // refreshAddBtn();
+}
+
+load(products);
 
 /* Navbar toggle */
 
