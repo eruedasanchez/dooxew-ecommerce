@@ -364,7 +364,8 @@ address {
   margin-inline: 15px; }
 
 .filter-btn {
-  transition: 0.25s ease; }
+  transition: 0.25s ease;
+  outline: none; }
 
 .filter-btn.active {
   color: #c58f63; }
@@ -395,12 +396,16 @@ address {
   transform: translate(-50%, -50%);
   opacity: 1; }
 
-.product-card .card-action-btn {
+.product-card .card-bag-btn, .product-card .card-action-btn {
   background-color: white;
   font-size: 22px;
   padding: 12px;
   border-radius: 50%;
-  transition: 0.25s ease; }
+  transition: 0.25s ease;
+  outline: none; }
+
+.product-card .card-bag-btn:is(:hover, :focus) {
+  color: #c58f63; }
 
 .product-card .card-action-btn:is(:hover, :focus) {
   color: #c58f63; }

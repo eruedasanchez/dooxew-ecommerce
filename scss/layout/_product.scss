@@ -23,6 +23,7 @@
 
 .filter-btn{
     transition: $transition-1;
+    outline: none;
 }
 
 .filter-btn.active{
@@ -60,12 +61,17 @@
     opacity: 1;
 }
 
-.product-card .card-action-btn{
+.product-card .card-bag-btn, .product-card .card-action-btn{
     background-color: $white;
     font-size: 22px;
     padding: 12px;
     border-radius: 50%;
     transition: $transition-1;
+    outline: none;
+}
+
+.product-card .card-bag-btn:is(:hover, :focus){
+    color: $tan-crayola;
 }
 
 .product-card .card-action-btn:is(:hover, :focus){

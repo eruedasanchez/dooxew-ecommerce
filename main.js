@@ -59,13 +59,54 @@ products.push(sixthDecoration);
 products.push(seventhDecoration);
 products.push(seventhAccesory);
 
-/* Load products */
 
 const btnCategory = document.querySelectorAll(".filter-btn");
 const productsContainer = document.querySelector("#data-filter");
-// const mainTitle = document.querySelector("#main-title");
-// let btnAdd = document.querySelectorAll(".add-product");   // Seleccion de todos los botones "add"
-// const quantity = document.querySelector("#quantity");
+let btnAdd = document.querySelectorAll(".card-bag-btn");   // Seleccion de todos los botones "bag"
+const quantity = document.querySelector("#ctn-badge");
+
+
+/************************************************** START FUNCTIONS ***************************************************/
+
+/**** Add products to the bag ****/
+
+function addToBag(event){
+    const idBtn = event.currentTarget.id;
+    const addedProduct = products.find(product => product.id === idBtn);            
+
+    if(productsInBag.some(product => product.id === idBtn)){
+        /* El producto ya fue agregado al carrito */
+        const index = productsInBag.findIndex(product => product.id === idBtn);    
+        productsInBag[index].cant++;
+    } else {
+        /* El producto es agregado al carrito por primera vez */
+        addedProduct.cant = 1;                                                      // Se agrega propiedad cantidad a los productos
+        productsInBag.push(addedProduct);
+    }
+
+    refreshQuantity();
+    
+    /* Se guarda al arreglo en el local Storage para cargarlo desde carrito.html */ 
+    localStorage.setItem("products-in-bag", JSON.stringify(productsInBag));
+}
+
+/**** Refresh quantity ****/
+
+const refreshQuantity = () => {
+    let newQuantity = productsInBag.reduce((acc, product) => acc + product.cant, 0);   // Se cuenta la cantidad de productos del arreglo y como los repetidos se almacenan en cant, se aplica reduce 
+    quantity.innerText = newQuantity;
+}
+
+/**** Refresh add btn ****/
+
+const refreshAddBtn = () => {
+    btnAdd = document.querySelectorAll(".card-bag-btn");
+    btnAdd.forEach(btn => {
+        btn.addEventListener("click", addToBag);
+    })
+}
+
+/* Load products */ 
 
 const load = (productsChosen) => {
     productsContainer.innerHTML = "";           // Vacia el contenedor para que no vaya acumulando las categorias filtradas dado que se le aplica un append 
@@ -77,22 +118,22 @@ const load = (productsChosen) => {
         if(product.id === "decoration-01"){
             li.innerHTML = `
             <div class="product-card">
-                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <div class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
                     <img src="${product.image}" width="300" height="300" loading="lazy" alt="${product.name}" class="img-cover">
                     <ul class="card-action-list">
                         <li>
-                            <button class="card-action-btn" aria-label="add to cart" title="add to cart">
-                                <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                            <button class="card-action-btn">
+                                <ion-icon name="add-outline"></ion-icon>
                             </button>
                         </li>
                         <li>
-                            <button class="card-action-btn" aria-label="add to cart" title="add to cart">
-                                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                            <button id=${product.id} class="card-bag-btn">
+                                <ion-icon name="bag-handle-outline"></ion-icon>
                             </button>
                         </li>
                         <li>
-                            <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
-                                <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                            <button class="card-action-btn">
+                                <ion-icon name="heart-outline"></ion-icon>
                             </button>
                         </li>
                     </ul>
@@ -105,7 +146,7 @@ const load = (productsChosen) => {
                             <div class="badge cyan">-10%</div>
                         </li>
                     </ul>
-                </a>
+                </div>
 
                 <div class="card-content">
                     <h3 class="h3">
@@ -121,22 +162,22 @@ const load = (productsChosen) => {
         } else if(product.id === "accesory-01"){
             li.innerHTML = `
             <div class="product-card">
-                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <div class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
                     <img src="${product.image}" width="300" height="300" loading="lazy" alt="${product.name}" class="img-cover">
                     <ul class="card-action-list">
                         <li>
-                            <button class="card-action-btn" aria-label="add to cart" title="add to cart">
-                                <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                            <button class="card-action-btn">
+                                <ion-icon name="add-outline"></ion-icon>
                             </button>
                         </li>
                         <li>
-                            <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
-                                <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                            <button class="card-action-btn">
+                                <ion-icon name="heart-outline"></ion-icon>
                             </button>
                         </li>
                     </ul>
                     <div class="card-badge">Out of stock</div>
-                </a>
+                </div>
 
                 <div class="card-content">
                     <h3 class="h3">
@@ -151,26 +192,26 @@ const load = (productsChosen) => {
         } else {
             li.innerHTML = `
                 <div class="product-card">
-                    <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                    <div class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
                         <img src="${product.image}" width="300" height="300" loading="lazy" alt="${product.name}" class="img-cover">
                         <ul class="card-action-list">
                             <li>
-                                <button class="card-action-btn" aria-label="add to cart" title="add to cart">
-                                    <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                                <button class="card-action-btn">
+                                    <ion-icon name="add-outline"></ion-icon>
                                 </button>
                             </li>
                             <li>
-                                <button class="card-action-btn" aria-label="add to cart" title="add to cart">
-                                    <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                                <button id=${product.id} class="card-bag-btn">
+                                    <ion-icon name="bag-handle-outline"></ion-icon>
                                 </button>
                             </li>
                             <li>
-                                <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
-                                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                                <button class="card-action-btn">
+                                    <ion-icon name="heart-outline"></ion-icon>
                                 </button>
                             </li>
                         </ul>
-                    </a>
+                    </div>
 
                     <div class="card-content">
                         <h3 class="h3">
@@ -185,12 +226,14 @@ const load = (productsChosen) => {
         }
         productsContainer.append(li);
     })
-    // refreshAddBtn();
+    refreshAddBtn();
 }
+
+/************************************************** END FUNCTIONS ***************************************************/
 
 load(products);
 
-/* Navbar toggle */
+/***** Navbar toggle *****/
 
 const navbar = document.querySelector(".sidebar"); 
 const navbarLinks = document.querySelectorAll(".navbar-link");
@@ -229,7 +272,7 @@ navbarLinks.forEach(navbarlink => {
     });
 });
 
-/* Header active when windows scroll down to 100px */
+/***** Header active when windows scroll down to 100px *****/
 
 const header = document.querySelector(".header");
 const backTopBtn = document.querySelector(".back-top-btn");
@@ -264,4 +307,25 @@ btnCategory.forEach(btn => {
         }
     })
 });
+
+
+let productsInBag;
+let productsInBagLocalStorage = localStorage.getItem("products-in-bag");
+
+if(productsInBagLocalStorage){
+    productsInBag = JSON.parse(productsInBagLocalStorage);
+    refreshQuantity();                                      // Se evita que el contador de productos vuelva a 0 cuando regresa de la pagina del carrito
+} else {
+    productsInBag = [];
+}
+
+
+
+
+
+
+
+
+
+
 
