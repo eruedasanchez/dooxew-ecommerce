@@ -77,20 +77,3 @@
     }
 }
 
-@media(max-width: 768px){
-    // :root{
-    //     --px: 40px;
-    // }
-
-    .cart{
-        grid-template-columns: 1fr;
-    }
-
-    .discount-token{
-        border-top: 1px solid $gainsboro;
-    }
-
-    .wrapper-flex{
-        gap: 20px;
-    }
-}

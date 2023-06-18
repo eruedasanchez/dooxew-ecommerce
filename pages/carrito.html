@@ -20,17 +20,17 @@
         <!-- End preload images -->
 </head>
 <body>
-    <main class="container">
-        <h1 class="heading"><ion-icon class="cart-ion-icon"  name="cart-outline"></ion-icon>Shopping cart</h1>
+    <main class="container-cart">
+        <h1 class="heading"><ion-icon class="cart-ion-icon" name="cart-outline"></ion-icon>Carrito</h1>
         <div class="item-flex">
             <!-- start checkout section -->
             <section class="checkout">
-                <h2 class="section-heading">Payment Details</h2>
+                <h2 class="section-heading">Detalle del pago</h2>
                 <div class="payment-form">
                     <div class="payment-method">
-                        <button class="cart-button method-selected">
+                        <button class="cart-button method selected">
                             <ion-icon class="cart-ion-icon" name="card"></ion-icon>
-                            <span class=".cart-span">Credit card</span>
+                            <span class=".cart-span">Tarjeta de credito</span>
                             <ion-icon class="checkmark fill" name="checkmark-circle"></ion-icon>
                         </button>
                         <button class="cart-button method">
@@ -42,16 +42,16 @@
 
                     <form action="#">
                         <div class="cardholder-name">
-                            <label for="cardholder-name" class="cart-label label-default">Cardholder name</label>
+                            <label for="cardholder-name" class="cart-label label-default">Escriba su nombre</label>
                             <input type="text" name="cardholder-name" id="cardholder-name" class="cart-input input-default">
                         </div>
                         <div class="card-number">
-                            <label for="card-number" class="cart-label label-default">Card number</label>
+                            <label for="card-number" class="cart-label label-default">Numero de la tarjeta</label>
                             <input type="number" name="card-number" id="card-number" class="cart-input input-default">
                         </div>
                         <div class="input-flex">
-                            <div class="expire-data">
-                                <label for="expire-name" class="cart-label label-default">Expiration date</label>
+                            <div class="expire-date">
+                                <label for="expire-name" class="cart-label label-default">Fecha de Vencimiento</label>
                                 <div class="input-flex">
                                     <input type="number" name="day" id="expire-data" placeholder="31" min="1" max="31" class="cart-input input-default">
                                     <input type="number" name="month" id="expire-data" placeholder="12" min="1" max="12" class="cart-input input-default">
@@ -64,16 +64,22 @@
                         </div>
                     </form>
                 </div>
-                <button class="cart-button btn btn-primary">
-                    <b>Pay</b> $ <span class=".cart-span" id="payAmount">2.15</span>
-                </button>
+                <div class="cart-buttons">
+                    <button class="cart-button btn btn-primary">
+                        <b>Pagar</b> $ <span class=".cart-span" id="payAmount">2.15</span>
+                    </button>
+                    <a href="../index.html" class="cart-button btn btn-secondary">
+                        <ion-icon class="cart-ion-icon" name="cart-outline"></ion-icon>
+                        <span class=".cart-span">Continuar comprando</span> 
+                    </a>
+                </div>
             </section>
             <!-- end checkout section -->
 
             <!-- inicio cart section -->
             <section class="cart">
                 <div class="cart-item-box">
-                    <h2 class="section-heading">Order sumary</h2>
+                    <h2 class="section-heading">Orden realizada</h2>
                     <div class="product-card">
                         <div class="card">
                             <div class="img-box">
@@ -123,24 +129,25 @@
                 </div>
                 <div class="wrapper">
                     <div class="discount-token">
-                        <label for="discount-token" class="cart-label label-default">Gift card / Discount code</label>
+                        <label for="discount-token" class="cart-label label-default">Gift card / Codigo de descuento </label>
                         <div class="wrapper-flex">
                             <input type="text" name="discount-token" id="discount-token" class="cart-input input-default">
-                            <button class="cart-button btn btn-outline">Apply</button>
+                            <button class="cart-button btn btn-outline">Aplicar</button>
                         </div>
                     </div>
                     <div class="amount">
                         <div class="subtotal">
-                            <span class=".cart-span">Subtotal</span> <span class=".cart-span">$ <span class=".cart-span" id="subtotal">2.05</span></span>
+                            <span class="cart-span">Subtotal</span> 
+                            <span class="cart-span">$ <span class="cart-span" id="subtotal">2.05</span></span>
                         </div>
                         <div class="tax">
-                            <span class=".cart-span">Tax</span> <span class=".cart-span">$ <span class=".cart-span" id="tax">0.10</span></span>
+                            <span class="cart-span">IVA</span> <span class="cart-span">$ <span class="cart-span" id="tax">0.10</span></span>
                         </div>
                         <div class="shipping">
-                            <span class=".cart-span">Shipping</span> <span class=".cart-span">$ <span class=".cart-span" id="shipping">0.00</span></span>
+                            <span class="cart-span">Envio</span> <span class="cart-span">$ <span class="cart-span" id="shipping">0.00</span></span>
                         </div>
                         <div class="total">
-                            <span class=".cart-span">Total</span> <span class=".cart-span">$ <span class=".cart-span" id="total">2.15</span></span>
+                            <span class="cart-span">Total</span> <span class="cart-span">$ <span class="cart-span" id="total">2.15</span></span>
                         </div>
                     </div>
                 </div>

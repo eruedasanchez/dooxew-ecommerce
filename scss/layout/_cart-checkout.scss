@@ -2,11 +2,11 @@
     width: 70%;
     padding: 40px $px;
     background: $white;
-    border-right: 1px solid $gainsboro;
+    border-right: 1px solid $granite-gray;
 }
 
 .section-heading{
-    color: $onyx;
+    color: $smokey-black;
     margin-bottom: 30px;
     font-size: $fs-24;
     font-weight: $fw-500;
@@ -35,7 +35,7 @@
 }
 
 .payment-method .selected{
-    border-color: $azure;
+    border-color: $tan-crayola;
 }
 
 .payment-method .method ion-icon{
@@ -48,13 +48,13 @@
 }
 
 .payment-method .method .fill{
-    color: $azure;
+    color: $tan-crayola;
 }
 
 .label-default{
     padding-left: 10px;
     margin-bottom: 5px;
-    font-size: $fs-14;
+    font-size: $fs-15;
     color: $spanish-gray;
 }
 
@@ -98,6 +98,10 @@
 }
 
 .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
     border-radius: $radius;
 }
 
@@ -107,18 +111,31 @@
 
 .btn:focus{
     color: $white;
-    background: $azure;
-    outline: 2x solid $azure;
+    background: $tan-crayola;
+    outline: 2x solid $manatee;
     outline-offset: 2px;
 }
 
 .btn-primary{
-    background: $azure;
+    background: $tan-crayola;
     font-weight: $fw-500;
     color: $white;
     padding: 13px 45px;
 }
 
 .btn-primary b{
-    margin-right: 10px;
+    margin-right: 13px;
+}
+
+.cart-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-secondary{
+    background: $manatee;
+    font-weight: $fw-500;
+    color: $white;
+    padding: 13px 45px;
+    gap: 14px;
 }

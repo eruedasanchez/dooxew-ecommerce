@@ -45,7 +45,7 @@
 .product-qty button{
     background: $platinum;
     width: 20px;
-    height: 50px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,11 +60,18 @@
     font-size: 10px;
 }
 
+.price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $fs-18;
+
+}
+
 .product-close-btn{
     position: absolute;
     top: 0;
     right: 0;
-
 }
 
 .product-close-btn ion-icon{
@@ -73,13 +80,13 @@
 }
 
 .product-close-btn:hover ion-icon{
-    color: $red-salsa;
+    color: $tan-crayola;
 }
 
 .discount-token{
     padding: 40px $px;
-    border-top: 1px solid $gainsboro;
-    border-bottom: 1px solid $gainsboro;
+    border-top: 1px solid $smokey-black;
+    border-bottom: 1px solid $smokey-black;
 }
 
 .wrapper-flex{
@@ -95,13 +102,13 @@
 }
 
 .btn-outline{
+    border: 2px solid $tan-crayola;
     padding: 10px 25px;
-    border: 1px solid $azure;
-    color: $azure;
+    color: $tan-crayola;
 }
 
 .btn-outline:hover{
-    background: $azure;
+    background: $tan-crayola;
     color: $white;
 }
 
@@ -119,7 +126,7 @@
 }
 
 .amount .total{
-    font-size: $fs-18;
+    font-size: $fs-24;
     font-weight: $fw-700;
-    color: $onyx;
+    color: $smokey-black;
 }

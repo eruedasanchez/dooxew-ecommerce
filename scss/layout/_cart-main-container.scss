@@ -1,7 +1,6 @@
 /* main container */
 
-.container{
-    border: 1px solid green;
+.container-cart{
     max-width: 1440px;
     min-height: 100vh;
     margin: auto;
@@ -10,10 +9,10 @@
 }
 
 .heading{
-    font-size: $fs-28;
-    font-weight: $fw-600;
-    color: $onyx;
-    border-bottom: 1px solid $gainsboro;
+    font-size: $fs-40; 
+    font-weight: $fw-500;
+    color: $smokey-black;
+    border-bottom: 1px solid $granite-gray;
     padding: 20px $px;
     display: flex;
     align-items: center;
@@ -21,7 +20,8 @@
 }
 
 .heading ion-icon{
-    font-size: 40px;
+    font-size: 50px;
+    color: $smokey-black;
 }
 
 .item-flex{

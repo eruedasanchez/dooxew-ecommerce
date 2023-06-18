@@ -90,25 +90,3 @@
     }
 }
 
-@media(max-width: 575px){
-    // :root{
-    //     --px:20px;
-    // }
-
-    .payment-method, .input-flex{
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .payment-method .method{
-        width: 100%;
-    }
-
-    .input-flex .expire-date, .input-flex .cvv{
-        width: 100%;
-    }
-
-    .expire-date .input-flex{
-        flex-direction: row;
-    }
-}

@@ -1,0 +1,25 @@
+@media(max-width: 768px){
+    
+    .cart{
+        grid-template-columns: 1fr;
+    }
+
+    .discount-token{
+        border-top: 1px solid $gainsboro;
+    }
+
+    .wrapper-flex{
+        gap: 20px;
+    }
+
+    .cart-buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .btn-primary, .btn-secondary{
+        width: 100%;
+    }
+}
