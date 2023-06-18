@@ -132,7 +132,7 @@ const load = (productsChosen) => {
                             </button>
                         </li>
                         <li>
-                            <button class="card-action-btn">
+                            <button class="card-heart-btn">
                                 <ion-icon name="heart-outline"></ion-icon>
                             </button>
                         </li>
@@ -171,7 +171,7 @@ const load = (productsChosen) => {
                             </button>
                         </li>
                         <li>
-                            <button class="card-action-btn">
+                            <button class="card-heart-btn">
                                 <ion-icon name="heart-outline"></ion-icon>
                             </button>
                         </li>
@@ -206,7 +206,7 @@ const load = (productsChosen) => {
                                 </button>
                             </li>
                             <li>
-                                <button class="card-action-btn">
+                                <button class="card-heart-btn">
                                     <ion-icon name="heart-outline"></ion-icon>
                                 </button>
                             </li>
@@ -314,10 +314,11 @@ let productsInBagLocalStorage = localStorage.getItem("products-in-bag");
 
 if(productsInBagLocalStorage){
     productsInBag = JSON.parse(productsInBagLocalStorage);
-    refreshQuantity();                                      // Se evita que el contador de productos vuelva a 0 cuando regresa de la pagina del carrito
+    refreshQuantity();                                       
 } else {
     productsInBag = [];
 }
+
 
 
 

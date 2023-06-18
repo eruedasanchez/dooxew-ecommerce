@@ -187,7 +187,8 @@ address {
   position: absolute;
   bottom: -8px;
   right: -10px;
-  border-radius: 16px; }
+  border-radius: 16px;
+  text-align: center; }
 
 .sidebar {
   visibility: hidden;
@@ -396,7 +397,7 @@ address {
   transform: translate(-50%, -50%);
   opacity: 1; }
 
-.product-card .card-bag-btn, .product-card .card-action-btn {
+.product-card .card-bag-btn, .product-card .card-heart-btn, .product-card .card-action-btn {
   background-color: white;
   font-size: 22px;
   padding: 12px;
