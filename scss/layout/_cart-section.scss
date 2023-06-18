@@ -1,0 +1,125 @@
+.cart{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cart-item-box{
+    padding: 40px $px;
+    margin-bottom: auto;
+}
+
+.product-card:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.product-card .card{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.card .product-img{
+    border-radius: $radius;
+}
+
+.card .detail .product-name{
+    font-weight: $fw-600;
+    font-size: $fs-15;
+    color: $dim-gay;
+    margin-bottom: 10px;
+}
+
+.card .detail .wrapper{
+    display: flex;
+    gap: 20px;
+}
+
+.product-qty{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.product-qty button{
+    background: $platinum;
+    width: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-qty button:active, .product-close-btn:active ion-icon{
+    transform: scale(0.95);
+} 
+
+.product-qty button ion-icon{
+    $ionicon-stoke-width: 60px;
+    font-size: 10px;
+}
+
+.product-close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.product-close-btn ion-icon{
+    font-size: 25px;
+    color: $quick-silver;
+}
+
+.product-close-btn:hover ion-icon{
+    color: $red-salsa;
+}
+
+.discount-token{
+    padding: 40px $px;
+    border-top: 1px solid $gainsboro;
+    border-bottom: 1px solid $gainsboro;
+}
+
+.wrapper-flex{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.wrapper-flex input{
+    padding: 12px 15px;
+    font-weight: $fw-600;
+    letter-spacing: 2px;
+}
+
+.btn-outline{
+    padding: 10px 25px;
+    border: 1px solid $azure;
+    color: $azure;
+}
+
+.btn-outline:hover{
+    background: $azure;
+    color: $white;
+}
+
+.amount{
+    padding: 40px $px;
+}
+
+.amount > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.amount > div:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.amount .total{
+    font-size: $fs-18;
+    font-weight: $fw-700;
+    color: $onyx;
+}

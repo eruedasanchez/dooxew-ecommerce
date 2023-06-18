@@ -693,6 +693,7 @@ a.card-meta-text:is(:hover, :focus) {
 
 /* main container */
 .container {
+  border: 1px solid green;
   max-width: 1440px;
   min-height: 100vh;
   margin: auto;
@@ -817,6 +818,108 @@ a.card-meta-text:is(:hover, :focus) {
 
 .btn-primary b {
   margin-right: 10px; }
+
+.cart {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; }
+
+.cart-item-box {
+  padding: 40px 60px;
+  margin-bottom: auto; }
+
+.product-card:not(:last-child) {
+  margin-bottom: 20px; }
+
+.product-card .card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; }
+
+.card .product-img {
+  border-radius: 5px; }
+
+.card .detail .product-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #636363;
+  margin-bottom: 10px; }
+
+.card .detail .wrapper {
+  display: flex;
+  gap: 20px; }
+
+.product-qty {
+  display: flex;
+  align-items: center;
+  gap: 10px; }
+
+.product-qty button {
+  background: #e8e8e8;
+  width: 20px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.product-qty button:active, .product-close-btn:active ion-icon {
+  transform: scale(0.95); }
+
+.product-qty button ion-icon {
+  font-size: 10px; }
+
+.product-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.product-close-btn ion-icon {
+  font-size: 25px;
+  color: #a3a3a3; }
+
+.product-close-btn:hover ion-icon {
+  color: #e84a4a; }
+
+.discount-token {
+  padding: 40px 60px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6; }
+
+.wrapper-flex {
+  display: flex;
+  align-items: center;
+  gap: 30px; }
+
+.wrapper-flex input {
+  padding: 12px 15px;
+  font-weight: 600;
+  letter-spacing: 2px; }
+
+.btn-outline {
+  padding: 10px 25px;
+  border: 1px solid #4a81e8;
+  color: #4a81e8; }
+
+.btn-outline:hover {
+  background: #4a81e8;
+  color: white; }
+
+.amount {
+  padding: 40px 60px; }
+
+.amount > div {
+  display: flex;
+  justify-content: space-between; }
+
+.amount > div:not(:last-child) {
+  margin-bottom: 10px; }
+
+.amount .total {
+  font-size: 18px;
+  font-weight: 700;
+  color: #404040; }
 
 @media (min-width: 575px) {
   /* REUSED STYLE */
