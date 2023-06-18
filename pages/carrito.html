@@ -69,6 +69,83 @@
                 </button>
             </section>
             <!-- end checkout section -->
+
+            <!-- inicio cart section -->
+            <section class="cart">
+                <div class="cart-item-box">
+                    <h2 class="section-heading">Order sumary</h2>
+                    <div class="product-card">
+                        <div class="card">
+                            <div class="img-box">
+                                <img src="../assets/img/decoration-01.jpg" alt="green tomatoes" width="80px" class="product-img">
+                            </div>
+                            <div class="detail">
+                                <h4 class="product-name">Green tomatoes 1 kilo</h4>
+                                <div class="wrapper">
+                                    <div class="product-qty">
+                                        <button id="decrement"><ion-icon name="remove-outline"></ion-icon></button>
+                                        <span id="quantity">1</span>
+                                        <button id="increment"><ion-icon name="add-outline"></ion-icon></button>
+                                    </div>
+                                    <div class="price">
+                                        $ <span id="price">1.25</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="product-close-btn"> <!--id="product-close-btn"-->
+                                <ion-icon name="close-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="card">
+                            <div class="img-box">
+                                <img src="../assets/img/accesory-01.jpg" alt="Cabbage" width="80px" class="product-img">
+                            </div>
+                            <div class="detail">
+                                <h4 class="product-name">Cabbage 1 Pcs</h4>
+                                <div class="wrapper">
+                                    <div class="product-qty">
+                                        <button id="decrement"><ion-icon name="remove-outline"></ion-icon></button>
+                                        <span id="quantity">1</span>
+                                        <button id="increment"><ion-icon name="add-outline"></ion-icon></button>
+                                    </div>
+                                    <div class="price">
+                                        $ <span id="price">0.80</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="product-close-btn">  <!-- id="product-close-btn" -->
+                                <ion-icon name="close-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="discount-token">
+                        <label for="discount-token" class="label-default">Gift card / Discount code</label>
+                        <div class="wrapper-flex">
+                            <input type="text" name="discount-token" id="discount-token" class="input-default">
+                            <button class="btn btn-outline">Apply</button>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <div class="subtotal">
+                            <span>Subtotal</span> <span>$ <span id="subtotal">2.05</span></span>
+                        </div>
+                        <div class="tax">
+                            <span>Tax</span> <span>$ <span id="tax">0.10</span></span>
+                        </div>
+                        <div class="shipping">
+                            <span>Shipping</span> <span>$ <span id="shipping">0.00</span></span>
+                        </div>
+                        <div class="total">
+                            <span>Total</span> <span>$ <span id="total">2.15</span></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end cart section -->
         </div>
     </main>
 
