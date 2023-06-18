@@ -1,0 +1,29 @@
+/* main container */
+
+.container{
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading{
+    font-size: $fs-28;
+    font-weight: $fw-600;
+    color: $onyx;
+    border-bottom: 1px solid $gainsboro;
+    padding: 20px $px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.heading ion-icon{
+    font-size: 40px;
+}
+
+.item-flex{
+    display: flex;
+    flex-grow: 1;
+}

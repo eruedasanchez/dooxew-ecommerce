@@ -1,0 +1,124 @@
+.checkout{
+    width: 70%;
+    padding: 40px $px;
+    background: $white;
+    border-right: 1px solid $gainsboro;
+}
+
+.section-heading{
+    color: $onyx;
+    margin-bottom: 30px;
+    font-size: $fs-24;
+    font-weight: $fw-500;
+}
+
+.payment-form{
+    margin-bottom: 40px;
+}
+
+.payment-method{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.payment-method .method{
+    border: 1px solid $quick-silver;
+    border-radius: $radius;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.payment-method .selected{
+    border-color: $azure;
+}
+
+.payment-method .method ion-icon{
+    font-size: 20px;
+}
+
+.payment-method .method .checkmark{
+    margin-left: auto;
+    color: $quick-silver;
+}
+
+.payment-method .method .fill{
+    color: $azure;
+}
+
+.label-default{
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-size: $fs-14;
+    color: $spanish-gray;
+}
+
+.input-default{
+    background: $platinum;
+    border-radius: $radius;
+    color: $davys-gray;
+}
+
+.payment-form input{
+    padding: 10px 15px;
+    font-size: $fs-18;
+    font-weight: $fw-500;
+}
+
+.cardholder-name, .card-number{
+    margin-bottom: 20px;
+}
+
+.card-number input, .cvv input{
+    letter-spacing: 3px;
+}
+
+.input-flex{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.input-flex .expire-date, .input-flex .cvv{
+    width: 50%;
+}
+
+.expire-date .input-flex{
+    color: $spanish-gray;
+    gap: 13px;
+}
+
+.expire-date .input-flex input{
+    text-align: center;
+}
+
+.btn{
+    border-radius: $radius;
+}
+
+.btn:active{
+    transform: scale(0.99);
+}
+
+.btn:focus{
+    color: $white;
+    background: $azure;
+    outline: 2x solid $azure;
+    outline-offset: 2px;
+}
+
+.btn-primary{
+    background: $azure;
+    font-weight: $fw-500;
+    color: $white;
+    padding: 13px 45px;
+}
+
+.btn-primary b{
+    margin-right: 10px;
+}

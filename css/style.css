@@ -463,7 +463,7 @@ address {
   font-size: 1.2rem; }
 
 .product-card .card-price .del {
-  color: #999999; }
+  color: #9e9e9e; }
 
 .blog .title-wrapper {
   display: flex;
@@ -527,7 +527,7 @@ address {
 .card-meta-item:not(:last-child)::after {
   content: "/";
   margin-inline: 8px;
-  color: #999999; }
+  color: #9e9e9e; }
 
 .card-meta-text {
   display: inline-block;
@@ -690,6 +690,133 @@ a.card-meta-text:is(:hover, :focus) {
   appearance: none;
   -webkit-appearance: none;
   margin: 0; }
+
+/* main container */
+.container {
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column; }
+
+.heading {
+  font-size: 28px;
+  font-weight: 600;
+  color: #404040;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  gap: 20px; }
+
+.heading ion-icon {
+  font-size: 40px; }
+
+.item-flex {
+  display: flex;
+  flex-grow: 1; }
+
+.checkout {
+  width: 70%;
+  padding: 40px 60px;
+  background: white;
+  border-right: 1px solid #e6e6e6; }
+
+.section-heading {
+  color: #404040;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 500; }
+
+.payment-form {
+  margin-bottom: 40px; }
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px; }
+
+.payment-method .method {
+  border: 1px solid #a3a3a3;
+  border-radius: 5px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  gap: 20px;
+  cursor: pointer; }
+
+.payment-method .selected {
+  border-color: #4a81e8; }
+
+.payment-method .method ion-icon {
+  font-size: 20px; }
+
+.payment-method .method .checkmark {
+  margin-left: auto;
+  color: #a3a3a3; }
+
+.payment-method .method .fill {
+  color: #4a81e8; }
+
+.label-default {
+  padding-left: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #9e9e9e; }
+
+.input-default {
+  background: #e8e8e8;
+  border-radius: 5px;
+  color: #4d4d4d; }
+
+.payment-form input {
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 500; }
+
+.cardholder-name, .card-number {
+  margin-bottom: 20px; }
+
+.card-number input, .cvv input {
+  letter-spacing: 3px; }
+
+.input-flex {
+  display: flex;
+  align-items: center;
+  gap: 30px; }
+
+.input-flex .expire-date, .input-flex .cvv {
+  width: 50%; }
+
+.expire-date .input-flex {
+  color: #9e9e9e;
+  gap: 13px; }
+
+.expire-date .input-flex input {
+  text-align: center; }
+
+.btn {
+  border-radius: 5px; }
+
+.btn:active {
+  transform: scale(0.99); }
+
+.btn:focus {
+  color: white;
+  background: #4a81e8;
+  outline: 2x solid #4a81e8;
+  outline-offset: 2px; }
+
+.btn-primary {
+  background: #4a81e8;
+  font-weight: 500;
+  color: white;
+  padding: 13px 45px; }
+
+.btn-primary b {
+  margin-right: 10px; }
 
 @media (min-width: 575px) {
   /* REUSED STYLE */
