@@ -28,3 +28,44 @@
         font-size: $fs-5;
     }
 }
+
+@media(max-width: 1200px){
+
+    .item-flex{
+        flex-direction: column-reverse;
+    }
+
+    /* checkout section responsive */
+
+    .checkout{
+        width: 100%;
+        border-right: none;
+    }
+
+    .btn-primary{
+        width: 100%;
+    }
+
+    /* cart section responsive */
+
+    .cart{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        border-bottom: 1px solid $gainsboro;
+    }
+
+    .cart .wrapper{
+        margin-top: auto;
+    }
+
+    .cart .cart-item-box{
+        border-right: 1px solid $gainsboro;
+        margin-bottom: 0;
+    }
+
+    .discount-token{
+        border-top: none;
+    }
+}
+
