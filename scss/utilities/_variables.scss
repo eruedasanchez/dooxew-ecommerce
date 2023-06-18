@@ -1,4 +1,6 @@
-/*********************************** Colors ***********************************/
+/*********************************** Index variables ***********************************/
+
+// Colors
 
 $red-orange-color-wheel: hsl(17, 96%, 48%);
 $middle-blue-green: hsl(167, 45%, 72%);
@@ -16,7 +18,7 @@ $manatee: hsl(218, 11%, 65%);
 $black: hsl(0, 0%, 0%);
 $white: hsl(0, 0%, 100%);
 
-/*********************************** Fonts ***********************************/
+// Fonts
 
 $font-roboto: 'Roboto', sans-serif;
 $font-mr-de-haviland: 'Mr De Haviland', cursive;
@@ -34,17 +36,31 @@ $fs-7: 1rem;
 $fs-cart-notif: 0.6rem;
 
 $fw-700: 700;
+$fw-600: 600;
 $fw-500: 500;
 
-/*********************************** Spacing ***********************************/
+// Spacing
 $section-padding: 50px;
 
-/*********************************** Shadow ***********************************/
+// Shadow
 $shadow: 0 0 2px hsla(0,0%,0%, 0.2);
 
-/*********************************** Transition ***********************************/
+// Transition
 $transition-1: 0.25s ease;
 $transition-2: 0.5s ease;
 $cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
 $cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
 
+
+/*********************************** Cart variables ***********************************/
+
+// Fonts
+$fs-28: 28px;
+$fs-24: 24px;
+$fs-18: 18px;
+$fs-15: 15px;
+$fs-14: 14px;
+
+// others 
+$px: 60px;
+$radius: 5px;

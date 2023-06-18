@@ -1,8 +1,5 @@
-/*********************************** Colors ***********************************/
-/*********************************** Fonts ***********************************/
-/*********************************** Spacing ***********************************/
-/*********************************** Shadow ***********************************/
-/*********************************** Transition ***********************************/
+/*********************************** Index variables ***********************************/
+/*********************************** Cart variables ***********************************/
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -22,6 +19,10 @@ body {
 
 body.active {
   overflow: hidden; }
+
+.html-cart {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px; }
 
 li {
   list-style: none; }
@@ -663,6 +664,32 @@ a.card-meta-text:is(:hover, :focus) {
   opacity: 1;
   visibility: visible;
   transform: translateY(-10px); }
+
+.cart-button {
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer; }
+
+.cart-ion-icon, .cart-span {
+  display: inline-block; }
+
+.cart-label, .cart-img {
+  display: block; }
+
+.cart-input {
+  font: inherit;
+  width: 100%;
+  border: none; }
+
+.cart-input:focus {
+  outline: 2px solid #c58f63; }
+
+/* remove number input up & down button */
+.cart-input::-webkit-inner-spin-button, .cart-input::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0; }
 
 @media (min-width: 575px) {
   /* REUSED STYLE */
