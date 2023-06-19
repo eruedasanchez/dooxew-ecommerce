@@ -691,6 +691,9 @@ a.card-meta-text:is(:hover, :focus) {
   -webkit-appearance: none;
   margin: 0; }
 
+.disabled {
+  display: none; }
+
 /* main container */
 .container-cart {
   max-width: 1440px;
@@ -698,6 +701,9 @@ a.card-meta-text:is(:hover, :focus) {
   margin: auto;
   display: flex;
   flex-direction: column; }
+
+.cont-title {
+  gap: 40px; }
 
 .heading {
   font-size: 40px;
@@ -851,7 +857,8 @@ a.card-meta-text:is(:hover, :focus) {
   position: relative;
   display: flex;
   align-items: flex-start;
-  gap: 20px; }
+  gap: 20px;
+  padding: 10px; }
 
 .card .product-img {
   border-radius: 5px; }

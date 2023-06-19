@@ -65,7 +65,7 @@
                     </form>
                 </div>
                 <div class="cart-buttons">
-                    <button class="cart-button btn btn-primary">
+                    <button id="pay-btn" class="cart-button btn btn-primary">
                         <b>Pagar</b> $ <span class=".cart-span" id="payAmount">2.15</span>
                     </button>
                     <a href="../index.html" class="cart-button btn btn-secondary">
@@ -79,52 +79,38 @@
             <!-- inicio cart section -->
             <section class="cart">
                 <div class="cart-item-box">
-                    <h2 class="section-heading">Orden realizada</h2>
-                    <div class="product-card">
-                        <div class="card">
-                            <div class="img-box">
-                                <img src="../assets/img/decoration-01.jpg" alt="green tomatoes" width="80px" class="cart-img product-img">
-                            </div>
-                            <div class="detail">
-                                <h4 class="product-name">Green tomatoes 1 kilo</h4>
-                                <div class="wrapper">
-                                    <div class="product-qty">
-                                        <button class="cart-button" id="decrement"><ion-icon class="cart-ion-icon" name="remove-outline"></ion-icon></button>
-                                        <span class=".cart-span" id="quantity">1</span>
-                                        <button class="cart-button" id="increment"><ion-icon class="cart-ion-icon" name="add-outline"></ion-icon></button>
-                                    </div>
-                                    <div class="price">
-                                        $ <span class=".cart-span" id="price">1.25</span>
+                    <h2 class="section-heading">Detalle de la orden</h2>
+                    <!-- <div id="bag-products" class="bag-products disabled">
+                        Codigo que se va a insertar en carrito.js 
+                    </div> -->
+                    <div class="bag-container">
+                        <p id="empty-bag" class="empty-bag">Tu carrito esta vacio</p>
+                        <div id="product-card" class="product-card disabled">
+                            <!-- Codigo a insertar en carrito.js -->
+                            <!--
+                            <div class="card">
+                                <div class="img-box">
+                                    <img src="${product.image}" alt="${product.name}" width="80px" class="cart-img product-img">
+                                </div>
+                                <div class="detail">
+                                    <h4 class="product-name">${product.name}</h4>
+                                    <div class="wrapper">
+                                        <div class="product-qty">
+                                            <button class="cart-button" id="decrement"><ion-icon class="cart-ion-icon" name="remove-outline"></ion-icon></button>
+                                            <span class=".cart-span" id="quantity">${product.cant}</span>
+                                            <button class="cart-button" id="increment"><ion-icon class="cart-ion-icon" name="add-outline"></ion-icon></button>
+                                        </div>
+                                        <div class="price">
+                                            $ <span class=".cart-span" id="price">${product.price * product.cant}</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <button class="cart-button product-close-btn"> <!--id="product-close-btn"-->
-                                <ion-icon class="cart-ion-icon" name="close-outline"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="card">
-                            <div class="img-box">
-                                <img src="../assets/img/accesory-01.jpg" alt="Cabbage" width="80px" class="cart-img product-img">
-                            </div>
-                            <div class="detail">
-                                <h4 class="product-name">Cabbage 1 Pcs</h4>
-                                <div class="wrapper">
-                                    <div class="product-qty">
-                                        <button class="cart-button" id="decrement"><ion-icon class="cart-ion-icon" name="remove-outline"></ion-icon></button>
-                                        <span class=".cart-span" id="quantity">1</span>
-                                        <button class="cart-button" id="increment"><ion-icon class="cart-ion-icon" name="add-outline"></ion-icon></button>
-                                    </div>
-                                    <div class="price">
-                                        $ <span class=".cart-span" id="price">0.80</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="cart-button product-close-btn">  <!-- id="product-close-btn" -->
-                                <ion-icon class="cart-ion-icon" name="close-outline"></ion-icon>
-                            </button>
-                        </div>
+                                <button class="cart-button product-close-btn" id="${product.id}"> id="product-close-btn"
+                                    <ion-icon class="cart-ion-icon" name="close-outline"></ion-icon>
+                                </button>
+                            </div>  
+                            -->
+                        </div> 
                     </div>
                 </div>
                 <div class="wrapper">
@@ -137,14 +123,13 @@
                     </div>
                     <div class="amount">
                         <div class="subtotal">
-                            <span class="cart-span">Subtotal</span> 
-                            <span class="cart-span">$ <span class="cart-span" id="subtotal">2.05</span></span>
+                            <span class="cart-span">Subtotal</span> <span class="cart-span">$ <span class="cart-span" id="subtotal">2.05</span></span>
                         </div>
                         <div class="tax">
-                            <span class="cart-span">IVA</span> <span class="cart-span">$ <span class="cart-span" id="tax">0.10</span></span>
+                            <span class="cart-span">IVA</span> <span class="cart-span">$ <span class="cart-span" id="iva">0.10</span></span>
                         </div>
                         <div class="shipping">
-                            <span class="cart-span">Envio</span> <span class="cart-span">$ <span class="cart-span" id="shipping">0.00</span></span>
+                            <span class="cart-span">Envio</span> <span class="cart-span">$ <span class="cart-span" id="envio">0.00</span></span>
                         </div>
                         <div class="total">
                             <span class="cart-span">Total</span> <span class="cart-span">$ <span class="cart-span" id="total">2.15</span></span>
