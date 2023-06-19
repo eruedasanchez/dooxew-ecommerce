@@ -99,6 +99,46 @@ const refreshTotal = () => {
     const totalAmmount = subtotalAmmount + ivaTax + shippingTax;
     total.innerText = `${totalAmmount}`; 
     payAmount.innerText = `${totalAmmount}`;
+
+    /**** Apply gift card / discout card ****/
+
+    const applyBtn = document.querySelector('#apply-btn');
+    const discountToken = document.querySelector('#discount-token');
+    let codigoAplicado = false;
+
+    applyBtn.addEventListener('click', () => {
+        if(!codigoAplicado){
+            if(discountToken.value == "CODER-JS-2023"){
+                payAmount.innerText = `${totalAmmount}` - `${totalAmmount}` * 0.10;
+                total.innerText = `${totalAmmount}` - `${totalAmmount}` * 0.10;
+                codigoAplicado = true;
+
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Descuento hecho',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            } else {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'codigo incorrecto',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+        } else {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'warning',
+                title: 'El codigo ya fue utilizado',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    });
 }
 
 const refreshDeleteButtons = () => {
@@ -122,6 +162,12 @@ const deleteOfBag = (event) => {
 
 
 uploadPurchaseOrder();
+
+
+
+
+
+
 
 // confirmar compra 
 

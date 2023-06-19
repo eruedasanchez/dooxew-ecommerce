@@ -326,6 +326,10 @@ heartBtns.forEach(btn => {
 })
 
 
+
+
+
+
 let productsInBag;
 let productsInBagLocalStorage = localStorage.getItem("products-in-bag");
 
