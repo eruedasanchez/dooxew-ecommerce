@@ -90,6 +90,10 @@ function addToBag(event){
     localStorage.setItem("products-in-bag", JSON.stringify(productsInBag));
 }
 
+
+
+
+
 /**** Refresh quantity ****/
 
 const refreshQuantity = () => {
@@ -308,6 +312,19 @@ btnCategory.forEach(btn => {
     })
 });
 
+/**** Like products to the bag ****/
+
+let cora = 0;
+const ctnHeart = document.querySelector('#ctn-heart');
+let heartBtns = document.querySelectorAll(".card-heart-btn");
+
+heartBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        cora++;
+        ctnHeart.innerText = cora;
+    });
+})
+
 
 let productsInBag;
 let productsInBagLocalStorage = localStorage.getItem("products-in-bag");
@@ -318,6 +335,10 @@ if(productsInBagLocalStorage){
 } else {
     productsInBag = [];
 }
+
+
+
+
 
 
 
