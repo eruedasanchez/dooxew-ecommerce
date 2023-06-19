@@ -180,7 +180,7 @@ const load = (productsChosen) => {
                             </button>
                         </li>
                     </ul>
-                    <div class="card-badge">Out of stock</div>
+                    <div class="card-badge">Sin stock</div>
                 </div>
 
                 <div class="card-content">
