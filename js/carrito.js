@@ -1,22 +1,15 @@
-// Se comienza verificando si hay algo en el carrito viendo el local Storage
+/**** Verificacion del local Storage para chequear si hay productos cargados en el carrito ****/ 
 
 const CERO = 0;
 let productsInBag = localStorage.getItem("products-in-bag");
 productsInBag = JSON.parse(productsInBag);
 
+/**** Selectors ****/
 
-
-
-
-
-
-const emptyBag = document.querySelector("#empty-bag");   // emptyBagContainer
-const productCard = document.querySelector("#product-card"); // #bag-products
-// bag-actions seria amount
-// finish purchase seria pagar e iria con alguna libreria que confirme la compra 
-let deleteBtns = document.querySelector(".product-close-btn"); // .bag-product-delete
-// bag-actions-clear no lo voy a necesitar en este caso
-const payBtn = document.querySelector("#pay-btn"); // bag-actions-buy
+const emptyBag = document.querySelector("#empty-bag");   
+const productCard = document.querySelector("#product-card"); 
+let deleteBtns = document.querySelector(".product-close-btn"); 
+const payBtn = document.querySelector("#pay-btn"); 
 
 const subtotal = document.getElementById("subtotal");
 const iva = document.getElementById("iva");
@@ -24,10 +17,7 @@ const shipping = document.getElementById("shipping");
 const total = document.getElementById("total");
 const payAmount = document.getElementById("payAmount");
 
-
-
-
-
+/************************************************** START FUNCTIONS ***************************************************/
 
 function uploadPurchaseOrder(){
     // Si no hay productos en el carrito JSON.parse(productsInBag) evalua a null y null -> false
@@ -35,8 +25,6 @@ function uploadPurchaseOrder(){
     if(productsInBag && productsInBag.length > CERO){
         emptyBag.classList.add("disabled");
         productCard.classList.remove("disabled");
-        // bagActionsContainer.classList.remove("disabled");
-        // finishPurchaseContainer.classList.add("disabled");
         
         productCard.innerHTML = "";
         
@@ -45,7 +33,7 @@ function uploadPurchaseOrder(){
             div.classList.add("card");   
             div.innerHTML = `
             <div class="img-box">
-                <img src="../assets/img/${product.id}.jpg" alt="${product.name}" width="80px" class="cart-img product-img">
+                <img src="${product.image}" alt="${product.name}" width="80px" class="cart-img product-img">
             </div>
             <div class="detail">
                 <h4 class="product-name">${product.name}</h4>
@@ -66,76 +54,64 @@ function uploadPurchaseOrder(){
             `;
             
             productCard.append(div);
-
-            const plusBtn = document.querySelector("#plus");
-            let quantity = document.querySelector("#quantity");
-            let price = document.querySelector("#price");
-
-            let lastValue = parseInt(quantity.innerText);
-            let lastPrice = parseInt(price.innerText);
-
-            plusBtn.addEventListener('click', () => {
-                lastValue++;
-                lastPrice += 20;
-            });
         })
     } else {
         emptyBag.classList.remove("disabled"); 
         productCard.classList.add("disabled");
-        // bagActionsContainer.classList.add("disabled");
-        // finishPurchaseContainer.classList.add("disabled");
     }
     refreshDeleteButtons();
     refreshTotal();
 }
 
 const refreshTotal = () => {
+    const applyBtn = document.querySelector('#apply-btn');
+    const discountToken = document.querySelector('#discount-token');
+    
     const subtotalAmmount = Math.round(parseInt(productsInBag.reduce((acc, producto) => acc + (producto.price * producto.cant), 0)));
     const ivaTax = Math.round(parseInt(subtotalAmmount * 0.21));
     const shippingTax = Math.round(parseInt(subtotalAmmount * 0.03));
+    const totalAmmount = subtotalAmmount + ivaTax + shippingTax;
+
     subtotal.innerText = `${subtotalAmmount}`;
     iva.innerText = `${ivaTax}`;
     shipping.innerText = `${shippingTax}`;
-    const totalAmmount = subtotalAmmount + ivaTax + shippingTax;
     total.innerText = `${totalAmmount}`; 
     payAmount.innerText = `${totalAmmount}`;
 
-    /**** Apply gift card / discout card ****/
+    /**** Apply gift card / Discout card ****/
 
-    const applyBtn = document.querySelector('#apply-btn');
-    const discountToken = document.querySelector('#discount-token');
-    let codigoAplicado = false;
-
+    let discountHasApplied = false;
+    const TENPERCENT = 0.10;
+    
     applyBtn.addEventListener('click', () => {
-        if(!codigoAplicado){
-            if(discountToken.value == "CODER-JS-2023"){
-                payAmount.innerText = `${totalAmmount}` - `${totalAmmount}` * 0.10;
-                total.innerText = `${totalAmmount}` - `${totalAmmount}` * 0.10;
-                codigoAplicado = true;
-
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'Descuento hecho',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-            } else {
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'error',
-                    title: 'codigo incorrecto',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-            }
-        } else {
+        if(!discountHasApplied && discountToken.value == "CODER-JS-2023"){
+            payAmount.innerText = `${totalAmmount}` - `${totalAmmount}` * TENPERCENT;
+            total.innerText = `${totalAmmount}` - `${totalAmmount}` * TENPERCENT;
+            discountHasApplied = true;
+            
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Felicitaciones! Descuento del 10% aplicado',
+                showConfirmButton: false,
+                timer: 3000
+            })
+        } else if(discountToken.value == "CODER-JS-2023"){
             Swal.fire({
                 position: 'top-end',
                 icon: 'warning',
-                title: 'El codigo ya fue utilizado',
+                title: 'Su gift card ya fue utilizada',
                 showConfirmButton: false,
-                timer: 1500
+                timer: 2000
+            })
+                
+        } else {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Codigo incorrecto',
+                showConfirmButton: false,
+                timer: 2000
             })
         }
     });
@@ -159,25 +135,18 @@ const deleteOfBag = (event) => {
     localStorage.setItem("products-in-bag", JSON.stringify(productsInBag));
 }
 
-
+/************************************************** END FUNCTIONS ***************************************************/
 
 uploadPurchaseOrder();
 
-
-
-
-
-
-
-// confirmar compra 
+/**** Confirm purchase ****/
 
 payBtn.addEventListener("click", () => {
     if(parseInt(payAmount.innerText) === 0){
         Swal.fire({
             icon: 'error',
             title: 'El carrito esta vacio!',
-            showConfirmButton: true,   // true muestra el boton de ok y false lo oculta
-            // timer: 2000 // milisegundos
+            showConfirmButton: true,   
         })
     } else {
         Swal.fire({
@@ -195,7 +164,7 @@ payBtn.addEventListener("click", () => {
                     'Nos encontramos en Avenida Rivadavia 5700. Nuestros horarios de atencion son lunes a viernes de 9 a 18hs. Gracias por confiar en nostros',
                     'success'
                 )
-
+                
                 productsInBag.length = 0;
                 localStorage.setItem("products-in-bag", JSON.stringify(productsInBag));
 
@@ -211,7 +180,4 @@ payBtn.addEventListener("click", () => {
         })
     }
 });
-
-
-
 

@@ -1,0 +1,33 @@
+[
+    {"name": "Animi Dolor Pariatur", "id": "decoration-01", "image":"../assets/img/decoration-01.jpg", "categoryName":"decoration", "categoryId":"decorations", "price":10},
+    {"name": "Art Deco Home", "id": "accesory-01", "image":"../assets/img/accesory-01.jpg", "categoryName":"accesory", "categoryId":"accesories", "price":30},
+    {"name": "Artificial Potted Plant", "id": "decoration-02", "image":"../assets/img/decoration-02.jpg", "categoryName":"decoration", "categoryId":"decorations", "price":40},
+    {"name": "Dark Green Jug", "id": "accesory-02", "image":"../assets/img/accesory-02.jpg", "categoryName":"accesory", "categoryId":"accesories", "price":17},
+    
+    {"name": "Drinking Glasses", "id": "accesory-03", "image":"../assets/img/accesory-03.jpg", "categoryName":"accesory", "categoryId":"accesories", "price":21},
+    {"name": "Helen Chair", "id": "furniture-01", "image":"../assets/img/furniture-01.jpg", "categoryName":"furniture", "categoryId":"furnitures", "price":69},
+    {"name": "High Quality Glass Bottle", "id": "accesory-04", "image":"../assets/img/accesory-04.jpg", "categoryName":"accesory", "categoryId":"accesories", "price":30},
+    {"name": "Living Room & Bedroom Lights", "id": "accesory-05", "image":"../assets/img/accesory-05.jpg", "categoryName":"accesory", "categoryId":"accesories", "price":45},
+    
+    {"name": "Nancy Chair", "id": "furniture-02", "image":"../assets/img/furniture-02.jpg", "categoryName":"furniture", "categoryId":"furnitures", "price":90},
+    {"name": "Simple Chair", "id": "furniture-03", "image":"../assets/img/furniture-03.jpg", "categoryName":"furniture", "categoryId":"furnitures", "price":40},
+    {"name": "Smooth Disk", "id": "decoration-03", "image":"../assets/img/decoration-03.jpg", "categoryName":"decoration", "categoryId":"decorations", "price":46},
+    {"name": "Table Black", "id": "furniture-04", "image":"../assets/img/furniture-04.jpg", "categoryName":"furniture", "categoryId":"furnitures", "price":67},
+    
+    {"name": "Table Wood Pine", "id": "furniture-05", "image":"../assets/img/furniture-05.jpg", "categoryName":"furniture", "categoryId":"furnitures", "price":50},
+    {"name": "Teapot With Black Tea", "id": "accesory-06", "image":"../assets/img/accesory-06.jpg", "categoryName":"accesory", "categoryId":"accesories", "price":25},
+    {"name": "Unique Decoration", "id": "decoration-04", "image":"../assets/img/decoration-04.jpg", "categoryName":"decoration", "categoryId":"decorations", "price":15},
+    {"name": "Vase Of Flowers", "id": "decoration-05", "image":"../assets/img/decoration-05.jpg", "categoryName":"decoration", "categoryId":"decorations", "price":77},
+    
+    {"name": "Wood Eggs", "id": "decoration-06", "image":"../assets/img/decoration-06.jpg", "categoryName":"decoration", "categoryId":"decorations", "price":19},
+    {"name": "Wooden Box", "id": "decoration-07", "image":"../assets/img/decoration-07.jpg", "categoryName":"decoration", "categoryId":"decorations", "price":27},
+    {"name": "Wooden Cups", "id": "accesory-07", "image":"../assets/img/accesory-07.jpg", "categoryName":"accesory", "categoryId":"accesories", "price":29}
+]
+
+
+
+
+
+
+
+
