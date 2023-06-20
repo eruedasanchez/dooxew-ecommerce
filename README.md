@@ -33,7 +33,7 @@
 * [SASS](): Version 1.62.0
 * [Ion Icons](): Version 5.2.3
 * [GIT](): Version 2.40
-
+* [Sweet Alert Library](): Version 11.7.12 
 
 ### Prerequisites
 
