@@ -3,3 +3,26 @@
     padding: $padding;
     box-sizing: $boxsizing;
 }
+
+@mixin dimensions($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin textStyle($color, $fsize, $fweight){
+    color: $width;
+    font-size: $fsize;
+    font-weight: $fweight;
+}
+
+@mixin flexbox($jcontent, $aitems, $gap){
+    display: flex;
+    justify-content: $jcontent;
+    align-items: $aitems;
+    gap: $gap;
+}
+
+@mixin grid($gtcol){
+    display: grid;
+    grid-template-columns: $gtcol;
+}

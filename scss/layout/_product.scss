@@ -14,11 +14,10 @@
 .filter-btn-item{
     position: relative;
     display: flex;
-}
-
-.filter-btn-item:not(:last-child)::after{
-    content: "|";
-    margin-inline: 15px;
+    &:not(:last-child)::after{
+        content: "|";
+        margin-inline: 15px;
+    }
 }
 
 .filter-btn{
@@ -32,28 +31,69 @@
 
 .product-card{
     text-align: center;
-}
-
-.product-card .card-banner::before{
-    inset: 0;
-    background-color: $black_10;
-    opacity: 0;
-    transition: $transition-1;
+    & .card-banner::before{
+        inset: 0;
+        background-color: $black_10;
+        opacity: 0;
+        transition: $transition-1;
+    }
+    & .card-action-list{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        display: flex;
+        gap: 15px;
+        opacity: 0;
+        transition: $transition-2;
+    }
+    & .badge-list{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+    & .badge{
+        @include dimensions(45px, 45px);
+        @include textStyle($white, $fs-7, $fw-500);
+        border-radius: 50%;
+        line-height: 45px;
+        margin-block-end: 10px;
+    }
+    & .card-badge{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: $black;
+        @include textStyle($white, $fs-5, $fw-500);
+        padding-inline: 15px;
+    }
+    & .h3{
+        font-size: $fs-5;
+    }
+    
+    & .card-title{
+        color: $smokey-black;
+        font-weight: $fw-500;
+        margin-block: 18px 5px;
+        transition: $transition-1;
+        &:is(:hover, :focus){
+            color: $tan-crayola;
+        }
+    }
+    & .card-price{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        color: $granite-gray;
+        font-size: $fs-6;
+        & .del{
+            color: $spanish-gray;
+        }
+    }
 }
 
 .product-card .card-banner:is(:hover, :focus-within)::before{
     opacity: 1;
-}
-
-.product-card .card-action-list{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 100%);
-    display: flex;
-    gap: 15px;
-    opacity: 0;
-    transition: $transition-2;
 }
 
 .product-card .card-banner:is(:hover, :focus-within) .card-action-list{
@@ -78,65 +118,10 @@
     color: $tan-crayola;
 }
 
-.product-card .badge-list{
-    position: absolute;
-    top: 15px;
-    left: 15px;
-}
-
-.product-card .badge{
-    color: $white;
-    font-size: $fs-7;
-    font-weight: $fw-500;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    line-height: 45px;
-    margin-block-end: 10px;
-}
-
 .product-card .badge.orange{
     background-color: $red-orange-color-wheel;
 }
 
 .product-card .badge.cyan{
     background-color: $middle-blue-green;
-}
-
-.product-card .card-badge{
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: $black;
-    color: $white;
-    font-weight: $fw-500;
-    font-size: $fs-5;
-    padding-inline: 15px;
-}
-
-.product-card .h3{
-    font-size: $fs-5;
-}
-
-.product-card .card-title{
-    color: $smokey-black;
-    font-weight: $fw-500;
-    margin-block: 18px 5px;
-    transition: $transition-1;
-}
-
-.product-card .card-title:is(:hover, :focus){
-    color: $tan-crayola;
-}
-
-.product-card .card-price{
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    color: $granite-gray;
-    font-size: $fs-6;
-}
-
-.product-card .card-price .del{
-    color: $spanish-gray;
 }

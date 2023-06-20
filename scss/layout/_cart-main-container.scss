@@ -1,5 +1,3 @@
-/* main container */
-
 .container-cart{
     max-width: 1440px;
     min-height: 100vh;
@@ -8,24 +6,17 @@
     flex-direction: column;
 }
 
-.cont-title{
-    gap: 40px;
-}
-
 .heading{
-    font-size: $fs-40; 
-    font-weight: $fw-500;
-    color: $smokey-black;
+    @include textStyle($smokey-black, $fs-40, $fw-500);
     border-bottom: 1px solid $granite-gray;
     padding: 20px $px;
     display: flex;
     align-items: center;
     gap: 20px;
-}
-
-.heading ion-icon{
-    font-size: 50px;
-    color: $smokey-black;
+    & ion-icon{
+        font-size: 50px;
+        color: $smokey-black;
+    }
 }
 
 .item-flex{

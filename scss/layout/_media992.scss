@@ -22,18 +22,16 @@
     /* NEWSLETTER */
 
     .newsletter{
-        --section-padding:50px;
+        --section-padding: 50px;
     }
 
     .newsletter-card{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        @include grid(1fr 1fr);
         align-items: center;
         gap: 40px;
-    }
-
-    .newsletter-card .card-content{
-        margin-block-end: 0;
+        & .card-content{
+            margin-block-end: 0;
+        } 
     }
 
     /* FOOTER */

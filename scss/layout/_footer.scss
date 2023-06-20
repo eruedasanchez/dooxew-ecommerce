@@ -19,10 +19,9 @@
     transition: $transition-1;
     font-size: $fs-6;
     color: $granite-gray;
-}
-
-.footer-link:is(:hover, :focus){
-    color: $tan-crayola;
+    &:is(:hover, :focus){
+        color: $tan-crayola;
+    }
 }
 
 .footer-brand .social-list{
@@ -30,9 +29,7 @@
 }
 
 .footer-list-title{
-    color: $smokey-black;
-    font-size: $fs-5;
-    font-weight: $fw-500;
+    @include textStyle($smokey-black, $fs-5, $fw-500);
     margin-block-end: 15px;
 }
 
@@ -45,10 +42,9 @@
     padding-inline-end: 35px;
     border-block-end: 1px solid $black_25;
     outline: none;
-}
-
-.footer .email-field:focus{
-    border-color: $tan-crayola;
+    &:focus{
+        border-color: $tan-crayola;
+    }
 }
 
 .footer-form-btn{

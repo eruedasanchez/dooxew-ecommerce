@@ -1,38 +1,36 @@
 .about{
     text-align: center;
-}
-
-.about .section-title{
-    font-family: $font-mr-de-haviland;
-    font-size: $fs-about;
-    font-weight: $fw-500;
-}
-
-.about .section-text{
-    margin-block: 12px 45px;
-    font-size: $fs-6;
+    & .container{
+        h2{
+            font-family: $font-mr-de-haviland;
+            font-size: $fs-about;
+            font-weight: $fw-500;
+        }
+        p{
+            margin-block: 12px 45px;
+            font-size: $fs-6;
+        }
+    } 
 }
 
 .about-card{
     position: relative;
-}
-
-.about-card .img-cover{
-    transition: $transition-2;
+    & .img-cover{
+        transition: $transition-2;
+    }
+    & .play-btn{
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-content: center;
+        color: $white;
+        font-size: 80px;
+        transition: $transition-2;
+    }
 }
 
 .about-card:is(:hover, :focus) .img-cover{
     transform: scale(1.1);
-}
-
-.about-card .play-btn{
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-content: center;
-    color: $white;
-    font-size: 80px;
-    transition: $transition-2;
 }
 
 .about-card:is(:hover, :focus) .play-btn{

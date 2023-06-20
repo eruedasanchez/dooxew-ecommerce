@@ -17,10 +17,9 @@
     font: inherit;
     width: 100%;
     border: none;
-}
-
-.cart-input:focus{
-    outline: 2px solid $tan-crayola;
+    &:focus{
+        outline: 2px solid $tan-crayola;
+    }
 }
 
 /* remove number input up & down button */

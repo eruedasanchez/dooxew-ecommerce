@@ -18,21 +18,18 @@
     /* cart section responsive */
 
     .cart{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        @include grid(1fr 1fr);
         width: 100%;
         border-bottom: 1px solid $smokey-black;
+        & .wrapper{
+            margin-top: auto;
+        }
+        & .cart-item-box{
+            border-right: 1px solid $smokey-black;
+            margin-bottom: 0;
+        }
     }
-
-    .cart .wrapper{
-        margin-top: auto;
-    }
-
-    .cart .cart-item-box{
-        border-right: 1px solid $smokey-black;
-        margin-bottom: 0;
-    }
-
+    
     .discount-token{
         border-top: none;
     }

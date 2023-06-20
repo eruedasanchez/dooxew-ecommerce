@@ -2,44 +2,38 @@
     height: 270px;
     --section-padding: 20px;
     background-color: $cultured;
+    & .card-form{
+        position: relative;
+    }
 }
 
 .newsletter-card{
     padding-inline: 15px;
-}
-
-.newsletter-card .card-content{
-    margin-block-end: 40px;
-}
-
-.newsletter-card .section-title{
-    margin-block-end: 8px;
-}
-
-.newsletter-card .h2{
-    font-size: $fs-2m;
+    & .card-content{
+        margin-block-end: 40px;
+    }
+    & .section-title{
+        margin-block-end: 8px;
+    }
+    & .h2{
+        font-size: $fs-2m;
+    }
+    & .email-field{
+        background-color: $white;
+        padding-block: 14px;
+        padding-inline: 20px 50px;
+        outline: 3px solid transparent;
+        outline-offset: 0;
+        transition: $transition-1;
+        &:focus{
+            outline-color: $black_25;
+        }
+    }  
 }
 
 .card-content .section-text{
     font-size: $fs-6;
     color: $smokey-black;
-}
-
-.newsletter .card-form{
-    position: relative;
-}
-
-.newsletter-card .email-field{
-    background-color: $white;
-    padding-block: 14px;
-    padding-inline: 20px 50px;
-    outline: 3px solid transparent;
-    outline-offset: 0;
-    transition: $transition-1;
-}
-
-.newsletter-card .email-field:focus{
-    outline-color: $black_25;
 }
 
 .email-field{

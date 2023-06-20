@@ -10,56 +10,55 @@
     margin-bottom: auto;
 }
 
-.product-card:not(:last-child){
-    margin-bottom: 20px;
+.product-card{
+    & .card{
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 10px;
+    }
+    &:not(:last-child){
+        margin-bottom: 20px;
+    }
 }
 
-.product-card .card{
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 10px;
-}
-
-.card .product-img{
-    border-radius: $radius;
-}
-
-.card .detail .product-name{
-    font-weight: $fw-600;
-    font-size: $fs-15;
-    color: $dim-gay;
-    margin-bottom: 10px;
-}
-
-.card .detail .wrapper{
-    display: flex;
-    gap: 20px;
-}
+.card{
+    & .product-img{
+        border-radius: $radius;
+    }
+    & .detail{
+        & .product-name{
+            @include textStyle($dim-gay, $fs-15, $fw-600);
+            margin-bottom: 10px;
+        }
+        & .wrapper{
+            display: flex;
+            gap: 20px;
+        } 
+    }
+} 
 
 .product-qty{
     display: flex;
     align-items: center;
     gap: 10px;
-}
-.product-qty button{
-    background: $platinum;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    & button{
+        @include dimensions(20px, 20px);
+        background: $platinum;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & ion-icon{
+            $ionicon-stoke-width: 60px;
+            font-size: 10px;
+        } 
+    } 
 }
 
 .product-qty button:active, .product-close-btn:active ion-icon{
     transform: scale(0.95);
 } 
-
-.product-qty button ion-icon{
-    $ionicon-stoke-width: 60px;
-    font-size: 10px;
-}
 
 .price{
     display: flex;
@@ -73,15 +72,13 @@
     position: absolute;
     top: 0;
     right: 0;
-}
-
-.product-close-btn ion-icon{
-    font-size: 25px;
-    color: $quick-silver;
-}
-
-.product-close-btn:hover ion-icon{
-    color: $tan-crayola;
+    & ion-icon{
+        font-size: 25px;
+        color: $quick-silver;
+    }
+    &:hover ion-icon{
+        color: $tan-crayola;
+    } 
 }
 
 .discount-token{
@@ -94,23 +91,21 @@
     display: flex;
     align-items: center;
     gap: 30px;
-}
-
-.wrapper-flex input{
-    padding: 12px 15px;
-    font-weight: $fw-600;
-    letter-spacing: 2px;
+    & input{
+        padding: 12px 15px;
+        font-weight: $fw-600;
+        letter-spacing: 2px;
+    }
 }
 
 .btn-outline{
     border: 2px solid $tan-crayola;
     padding: 10px 25px;
     color: $tan-crayola;
-}
-
-.btn-outline:hover{
-    background: $tan-crayola;
-    color: $white;
+    &:hover{
+        background: $tan-crayola;
+        color: $white;
+    }
 }
 
 .amount{
@@ -127,7 +122,5 @@
 }
 
 .amount .total{
-    font-size: $fs-24;
-    font-weight: $fw-700;
-    color: $smokey-black;
+    @include textStyle($smokey-black, $fs-24, $fw-700);
 }

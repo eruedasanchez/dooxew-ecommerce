@@ -9,37 +9,31 @@
 
 .hero-card{
     position: relative;
+    & .img-cover{
+        transition: $transition-2;
+    }
+    &:is(:hover, :focus) .img-cover{
+        transform: scale(1.1);
+    }
+    & .card-content{
+        position: absolute;
+        top: 14px;
+        left: 10px;
+        right: 10px;
+    }
+    &:is(.card-title, .card-text){
+        font-weight: $fw-500;
+    }
+    & .card-title{
+        font-size: $fs-4;
+        transition: $transition-1;
+        &:is(:hover, :focus){
+            color: $tan-crayola;
+        }
+    }
+    & .card-text{
+        color: $granite-gray;
+        font-size: $fs-5;
+    } 
 }
 
-.hero-card .img-cover{
-    transition: $transition-2;
-}
-
-.hero-card:is(:hover, :focus) .img-cover{
-    transform: scale(1.1);
-}
-
-.hero-card .card-content{
-    position: absolute;
-    top: 14px;
-    left: 10px;
-    right: 10px;
-}
-
-.hero-card :is(.card-title, .card-text){
-    font-weight: $fw-500;
-}
-
-.hero-card .card-title{
-    font-size: $fs-4;
-    transition: $transition-1;
-}
-
-.hero-card .card-text{
-    color: $granite-gray;
-    font-size: $fs-5;
-}
-
-.hero-card .card-title:is(:hover, :focus){
-    color: $tan-crayola;
-}

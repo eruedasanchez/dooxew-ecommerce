@@ -6,13 +6,14 @@
     }
 
     /* HEADER */
-    .header .input-wrapper{
-        width: 290px;
-    }
-
-    .header .input-field{
-        font-size: $fs-5;
-    }
+    .header{
+        & .input-wrapper{
+            width: 290px;
+        }
+        & .input-field{
+            font-size: $fs-5;
+        }
+    } 
 
     /* PRODUCT */
     .product-list{
@@ -20,13 +21,14 @@
     }
 
     /* HERO */
-    .hero-card .card-title{
-        font-size: $fs-4;
-    }
-    
-    .hero-card .card-text{
-        font-size: $fs-5;
-    }
+    .hero-card{
+        & .card-title{
+            font-size: $fs-4;
+        }
+        & .card-text{
+            font-size: $fs-5;
+        }
+    } 
 }
 
 

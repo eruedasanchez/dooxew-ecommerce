@@ -91,9 +91,8 @@ address {
 
 .social-link {
   transition: 0.25s ease; }
-
-.social-link:is(:hover, :focus) {
-  color: #c58f63; }
+  .social-link:is(:hover, :focus) {
+    color: #c58f63; }
 
 .section {
   padding-block: 50px; }
@@ -139,9 +138,13 @@ address {
   left: 0;
   padding-block: 15px;
   z-index: 4; }
-
-.header .input-wrapper {
-  display: none; }
+  .header .input-wrapper {
+    display: none; }
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; }
 
 /* Clase aplicada en js */
 .header.active {
@@ -156,12 +159,6 @@ address {
   100% {
     transform: translateY(0); } }
 
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px; }
-
 .logo {
   font-size: 2.8rem;
   font-weight: 700; }
@@ -174,22 +171,20 @@ address {
   position: relative;
   font-size: 24px;
   transition: 0.25s ease; }
-
-.header-action-btn:is(:hover, :focus) {
-  color: #c58f63; }
-
-.header-action-btn .btn-badge {
-  width: 18px;
-  height: 18px;
-  background-color: #c58f63;
-  color: white;
-  font-size: 0.6rem;
-  font-weight: 500;
-  position: absolute;
-  bottom: -8px;
-  right: -10px;
-  border-radius: 16px;
-  text-align: center; }
+  .header-action-btn:is(:hover, :focus) {
+    color: #c58f63; }
+  .header-action-btn .btn-badge {
+    width: 18px;
+    height: 18px;
+    background-color: #c58f63;
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 500;
+    position: absolute;
+    bottom: -8px;
+    right: -10px;
+    border-radius: 16px;
+    text-align: center; }
 
 .sidebar {
   visibility: hidden;
@@ -205,6 +200,10 @@ address {
   overflow-y: auto;
   z-index: 5;
   transition: 0.25s cubic-bezier(0.51, 0.03, 0.64, 0.28); }
+  .sidebar .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-block: 40px 75px; }
 
 .sidebar.active {
   transform: translateX(-425px);
@@ -213,11 +212,6 @@ address {
 
 .nav-close-btn {
   font-size: 30px; }
-
-.sidebar .wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-block: 40px 75px; }
 
 .sidebar-list-title, .contact-list-title, .social-list-title {
   color: #666666;
@@ -232,9 +226,8 @@ address {
   margin-block-start: 6px;
   transition: 0.25s ease;
   font-size: 1.2rem; }
-
-.sidebar-link:is(:hover, :focus) {
-  color: #c58f63; }
+  .sidebar-link:is(:hover, :focus) {
+    color: #c58f63; }
 
 .navbar {
   margin-block-end: 60px; }
@@ -246,9 +239,8 @@ address {
   font-weight: 500;
   font-size: 1.4rem;
   transition: 0.25s ease; }
-
-.navbar-link:is(:hover, :focus) {
-  color: #666666; }
+  .navbar-link:is(:hover, :focus) {
+    color: #666666; }
 
 .address, .contact-link {
   color: #121212;
@@ -286,62 +278,51 @@ address {
 
 .hero-card {
   position: relative; }
-
-.hero-card .img-cover {
-  transition: 0.5s ease; }
-
-.hero-card:is(:hover, :focus) .img-cover {
-  transform: scale(1.1); }
-
-.hero-card .card-content {
-  position: absolute;
-  top: 14px;
-  left: 10px;
-  right: 10px; }
-
-.hero-card :is(.card-title, .card-text) {
-  font-weight: 500; }
-
-.hero-card .card-title {
-  font-size: 1.8rem;
-  transition: 0.25s ease; }
-
-.hero-card .card-text {
-  color: #666666;
-  font-size: 1.4rem; }
-
-.hero-card .card-title:is(:hover, :focus) {
-  color: #c58f63; }
+  .hero-card .img-cover {
+    transition: 0.5s ease; }
+  .hero-card:is(:hover, :focus) .img-cover {
+    transform: scale(1.1); }
+  .hero-card .card-content {
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    right: 10px; }
+  .hero-card:is(.card-title, .card-text) {
+    font-weight: 500; }
+  .hero-card .card-title {
+    font-size: 1.8rem;
+    transition: 0.25s ease; }
+    .hero-card .card-title:is(:hover, :focus) {
+      color: #c58f63; }
+  .hero-card .card-text {
+    color: #666666;
+    font-size: 1.4rem; }
 
 .about {
   text-align: center; }
-
-.about .section-title {
-  font-family: "Mr De Haviland", cursive;
-  font-size: 5rem;
-  font-weight: 500; }
-
-.about .section-text {
-  margin-block: 12px 45px;
-  font-size: 1.2rem; }
+  .about .container h2 {
+    font-family: "Mr De Haviland", cursive;
+    font-size: 5rem;
+    font-weight: 500; }
+  .about .container p {
+    margin-block: 12px 45px;
+    font-size: 1.2rem; }
 
 .about-card {
   position: relative; }
-
-.about-card .img-cover {
-  transition: 0.5s ease; }
+  .about-card .img-cover {
+    transition: 0.5s ease; }
+  .about-card .play-btn {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    color: white;
+    font-size: 80px;
+    transition: 0.5s ease; }
 
 .about-card:is(:hover, :focus) .img-cover {
   transform: scale(1.1); }
-
-.about-card .play-btn {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-content: center;
-  color: white;
-  font-size: 80px;
-  transition: 0.5s ease; }
 
 .about-card:is(:hover, :focus) .play-btn {
   background-color: rgba(0, 0, 0, 0.4); }
@@ -360,10 +341,9 @@ address {
 .filter-btn-item {
   position: relative;
   display: flex; }
-
-.filter-btn-item:not(:last-child)::after {
-  content: "|";
-  margin-inline: 15px; }
+  .filter-btn-item:not(:last-child)::after {
+    content: "|";
+    margin-inline: 15px; }
 
 .filter-btn {
   transition: 0.25s ease;
@@ -374,25 +354,62 @@ address {
 
 .product-card {
   text-align: center; }
-
-.product-card .card-banner::before {
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transition: 0.25s ease; }
+  .product-card .card-banner::before {
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: 0.25s ease; }
+  .product-card .card-action-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    transition: 0.5s ease; }
+  .product-card .badge-list {
+    position: absolute;
+    top: 15px;
+    left: 15px; }
+  .product-card .badge {
+    width: 45px;
+    height: 45px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 50%;
+    line-height: 45px;
+    margin-block-end: 10px; }
+  .product-card .card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding-inline: 15px; }
+  .product-card .h3 {
+    font-size: 1.4rem; }
+  .product-card .card-title {
+    color: #121212;
+    font-weight: 500;
+    margin-block: 18px 5px;
+    transition: 0.25s ease; }
+    .product-card .card-title:is(:hover, :focus) {
+      color: #c58f63; }
+  .product-card .card-price {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    color: #666666;
+    font-size: 1.2rem; }
+    .product-card .card-price .del {
+      color: #9e9e9e; }
 
 .product-card .card-banner:is(:hover, :focus-within)::before {
   opacity: 1; }
-
-.product-card .card-action-list {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 100%);
-  display: flex;
-  gap: 15px;
-  opacity: 0;
-  transition: 0.5s ease; }
 
 .product-card .card-banner:is(:hover, :focus-within) .card-action-list {
   transform: translate(-50%, -50%);
@@ -412,58 +429,11 @@ address {
 .product-card .card-action-btn:is(:hover, :focus) {
   color: #c58f63; }
 
-.product-card .badge-list {
-  position: absolute;
-  top: 15px;
-  left: 15px; }
-
-.product-card .badge {
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  line-height: 45px;
-  margin-block-end: 10px; }
-
 .product-card .badge.orange {
   background-color: #f04705; }
 
 .product-card .badge.cyan {
   background-color: #97d8ca; }
-
-.product-card .card-badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: black;
-  color: white;
-  font-weight: 500;
-  font-size: 1.4rem;
-  padding-inline: 15px; }
-
-.product-card .h3 {
-  font-size: 1.4rem; }
-
-.product-card .card-title {
-  color: #121212;
-  font-weight: 500;
-  margin-block: 18px 5px;
-  transition: 0.25s ease; }
-
-.product-card .card-title:is(:hover, :focus) {
-  color: #c58f63; }
-
-.product-card .card-price {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  color: #666666;
-  font-size: 1.2rem; }
-
-.product-card .card-price .del {
-  color: #9e9e9e; }
 
 .blog .title-wrapper {
   display: flex;
@@ -471,9 +441,8 @@ address {
   justify-content: space-between;
   gap: 10px 50px;
   margin-block-end: 50px; }
-
-.title-wrapper h2 {
-  font-size: 2rem; }
+  .blog .title-wrapper h2 {
+    font-size: 2rem; }
 
 .blog .btn-link {
   display: flex;
@@ -482,9 +451,8 @@ address {
   font-size: 1.4rem;
   color: #121212;
   transition: 0.25s ease; }
-
-.blog .btn-link:is(:hover, :focus) {
-  color: #c58f63; }
+  .blog .btn-link:is(:hover, :focus) {
+    color: #c58f63; }
 
 .blog-card .card-banner {
   position: relative; }
@@ -500,77 +468,67 @@ address {
   padding: 5px 15px;
   transform: translateX(100%);
   transition: 0.5s ease; }
-
-.blog-card:is(:hover, :focus) .card-btn {
-  transform: translateX(0); }
-
-.blog-card .card-btn .span {
-  font-size: 1.2rem; }
+  .blog-card .card-btn .span {
+    font-size: 1.2rem; }
 
 .blog-card .card-title {
   margin-block: 20px 10px;
   transition: 0.25s ease;
   font-size: 1.4rem; }
-
-.blog-card .card-title:is(:hover, :focus) {
-  color: #c58f63; }
+  .blog-card .card-title:is(:hover, :focus) {
+    color: #c58f63; }
 
 .blog-card .card-meta-list {
   display: flex;
   align-items: center; }
 
+.blog-card:is(:hover, :focus) .card-btn {
+  transform: translateX(0); }
+
 .card-meta-item {
   position: relative;
   color: #666666;
   font-size: 1.1rem; }
-
-.card-meta-item:not(:last-child)::after {
-  content: "/";
-  margin-inline: 8px;
-  color: #9e9e9e; }
+  .card-meta-item:not(:last-child)::after {
+    content: "/";
+    margin-inline: 8px;
+    color: #9e9e9e; }
 
 .card-meta-text {
   display: inline-block;
   color: black;
   transition: 0.25s ease; }
-
-a.card-meta-text:is(:hover, :focus) {
-  color: #c58f63; }
+  .card-meta-text:is(:hover, :focus) {
+    color: #666666; }
 
 .newsletter {
   height: 270px;
   --section-padding: 20px;
   background-color: #f3f4f6; }
+  .newsletter .card-form {
+    position: relative; }
 
 .newsletter-card {
   padding-inline: 15px; }
-
-.newsletter-card .card-content {
-  margin-block-end: 40px; }
-
-.newsletter-card .section-title {
-  margin-block-end: 8px; }
-
-.newsletter-card .h2 {
-  font-size: 2.5rem; }
+  .newsletter-card .card-content {
+    margin-block-end: 40px; }
+  .newsletter-card .section-title {
+    margin-block-end: 8px; }
+  .newsletter-card .h2 {
+    font-size: 2.5rem; }
+  .newsletter-card .email-field {
+    background-color: white;
+    padding-block: 14px;
+    padding-inline: 20px 50px;
+    outline: 3px solid transparent;
+    outline-offset: 0;
+    transition: 0.25s ease; }
+    .newsletter-card .email-field:focus {
+      outline-color: rgba(0, 0, 0, 0.25); }
 
 .card-content .section-text {
   font-size: 1.2rem;
   color: #121212; }
-
-.newsletter .card-form {
-  position: relative; }
-
-.newsletter-card .email-field {
-  background-color: white;
-  padding-block: 14px;
-  padding-inline: 20px 50px;
-  outline: 3px solid transparent;
-  outline-offset: 0;
-  transition: 0.25s ease; }
-
-.newsletter-card .email-field:focus {
-  outline-color: rgba(0, 0, 0, 0.25); }
 
 .email-field {
   font-size: 1.1rem; }
@@ -600,9 +558,8 @@ a.card-meta-text:is(:hover, :focus) {
   transition: 0.25s ease;
   font-size: 1.2rem;
   color: #666666; }
-
-.footer-link:is(:hover, :focus) {
-  color: #c58f63; }
+  .footer-link:is(:hover, :focus) {
+    color: #c58f63; }
 
 .footer-brand .social-list {
   margin-block-start: 30px; }
@@ -621,9 +578,8 @@ a.card-meta-text:is(:hover, :focus) {
   padding-inline-end: 35px;
   border-block-end: 1px solid rgba(0, 0, 0, 0.25);
   outline: none; }
-
-.footer .email-field:focus {
-  border-color: #c58f63; }
+  .footer .email-field:focus {
+    border-color: #c58f63; }
 
 .footer-form-btn {
   position: absolute;
@@ -681,9 +637,8 @@ a.card-meta-text:is(:hover, :focus) {
   font: inherit;
   width: 100%;
   border: none; }
-
-.cart-input:focus {
-  outline: 2px solid #c58f63; }
+  .cart-input:focus {
+    outline: 2px solid #c58f63; }
 
 /* remove number input up & down button */
 .cart-input::-webkit-inner-spin-button, .cart-input::-webkit-outer-spin-button {
@@ -694,16 +649,12 @@ a.card-meta-text:is(:hover, :focus) {
 .disabled {
   display: none; }
 
-/* main container */
 .container-cart {
   max-width: 1440px;
   min-height: 100vh;
   margin: auto;
   display: flex;
   flex-direction: column; }
-
-.cont-title {
-  gap: 40px; }
 
 .heading {
   font-size: 40px;
@@ -714,10 +665,9 @@ a.card-meta-text:is(:hover, :focus) {
   display: flex;
   align-items: center;
   gap: 20px; }
-
-.heading ion-icon {
-  font-size: 50px;
-  color: #121212; }
+  .heading ion-icon {
+    font-size: 50px;
+    color: #121212; }
 
 .item-flex {
   display: flex;
@@ -743,29 +693,24 @@ a.card-meta-text:is(:hover, :focus) {
   align-items: center;
   gap: 30px;
   margin-bottom: 40px; }
-
-.payment-method .method {
-  border: 1px solid #a3a3a3;
-  border-radius: 5px;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  padding: 15px 30px;
-  gap: 20px;
-  cursor: pointer; }
-
-.payment-method .selected {
-  border-color: #c58f63; }
-
-.payment-method .method ion-icon {
-  font-size: 20px; }
-
-.payment-method .method .checkmark {
-  margin-left: auto;
-  color: #a3a3a3; }
-
-.payment-method .method .fill {
-  color: #c58f63; }
+  .payment-method .method {
+    border: 1px solid #a3a3a3;
+    border-radius: 5px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 20px;
+    cursor: pointer; }
+    .payment-method .method ion-icon {
+      font-size: 20px; }
+    .payment-method .method .checkmark {
+      margin-left: auto;
+      color: #a3a3a3; }
+    .payment-method .method .fill {
+      color: #c58f63; }
+  .payment-method .selected {
+    border-color: #c58f63; }
 
 .label-default {
   padding-left: 10px;
@@ -800,9 +745,8 @@ a.card-meta-text:is(:hover, :focus) {
 .expire-date .input-flex {
   color: #9e9e9e;
   gap: 13px; }
-
-.expire-date .input-flex input {
-  text-align: center; }
+  .expire-date .input-flex input {
+    text-align: center; }
 
 .btn {
   display: flex;
@@ -810,24 +754,21 @@ a.card-meta-text:is(:hover, :focus) {
   align-items: center;
   width: 40%;
   border-radius: 5px; }
-
-.btn:active {
-  transform: scale(0.99); }
-
-.btn:focus {
-  color: white;
-  background: #c58f63;
-  outline: 2x solid #9ca3b0;
-  outline-offset: 2px; }
+  .btn:active {
+    transform: scale(0.99); }
+  .btn:focus {
+    color: white;
+    background: #c58f63;
+    outline: 2x solid #9ca3b0;
+    outline-offset: 2px; }
 
 .btn-primary {
   background: #c58f63;
   font-weight: 500;
   color: white;
   padding: 13px 45px; }
-
-.btn-primary b {
-  margin-right: 13px; }
+  .btn-primary b {
+    margin-right: 13px; }
 
 .cart-buttons {
   display: flex;
@@ -850,15 +791,15 @@ a.card-meta-text:is(:hover, :focus) {
   padding: 40px 60px;
   margin-bottom: auto; }
 
-.product-card:not(:last-child) {
-  margin-bottom: 20px; }
-
 .product-card .card {
   position: relative;
   display: flex;
   align-items: flex-start;
   gap: 20px;
   padding: 10px; }
+
+.product-card:not(:last-child) {
+  margin-bottom: 20px; }
 
 .card .product-img {
   border-radius: 5px; }
@@ -877,20 +818,18 @@ a.card-meta-text:is(:hover, :focus) {
   display: flex;
   align-items: center;
   gap: 10px; }
-
-.product-qty button {
-  background: #e8e8e8;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  .product-qty button {
+    background: #e8e8e8;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .product-qty button ion-icon {
+      font-size: 10px; }
 
 .product-qty button:active, .product-close-btn:active ion-icon {
   transform: scale(0.95); }
-
-.product-qty button ion-icon {
-  font-size: 10px; }
 
 .price {
   display: flex;
@@ -902,13 +841,11 @@ a.card-meta-text:is(:hover, :focus) {
   position: absolute;
   top: 0;
   right: 0; }
-
-.product-close-btn ion-icon {
-  font-size: 25px;
-  color: #a3a3a3; }
-
-.product-close-btn:hover ion-icon {
-  color: #c58f63; }
+  .product-close-btn ion-icon {
+    font-size: 25px;
+    color: #a3a3a3; }
+  .product-close-btn:hover ion-icon {
+    color: #c58f63; }
 
 .discount-token {
   padding: 40px 60px;
@@ -919,20 +856,18 @@ a.card-meta-text:is(:hover, :focus) {
   display: flex;
   align-items: center;
   gap: 30px; }
-
-.wrapper-flex input {
-  padding: 12px 15px;
-  font-weight: 600;
-  letter-spacing: 2px; }
+  .wrapper-flex input {
+    padding: 12px 15px;
+    font-weight: 600;
+    letter-spacing: 2px; }
 
 .btn-outline {
   border: 2px solid #c58f63;
   padding: 10px 25px;
   color: #c58f63; }
-
-.btn-outline:hover {
-  background: #c58f63;
-  color: white; }
+  .btn-outline:hover {
+    background: #c58f63;
+    color: white; }
 
 .amount {
   padding: 40px 60px; }
@@ -1031,8 +966,8 @@ a.card-meta-text:is(:hover, :focus) {
   .hero-list {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px; }
-  .hero-list .colspan-2 {
-    grid-column: span 2; }
+    .hero-list .colspan-2 {
+      grid-column: span 2; }
   .hero-card .card-title {
     font-size: 1.2rem; }
   .hero-card .card-text {
@@ -1075,8 +1010,8 @@ a.card-meta-text:is(:hover, :focus) {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 40px; }
-  .newsletter-card .card-content {
-    margin-block-end: 0; }
+    .newsletter-card .card-content {
+      margin-block-end: 0; }
   /* FOOTER */
   .footer-top {
     grid-template-columns: 0.6fr 0.75fr 0.4fr 0.5fr;
@@ -1117,11 +1052,11 @@ a.card-meta-text:is(:hover, :focus) {
     grid-template-columns: 1fr 1fr;
     width: 100%;
     border-bottom: 1px solid #121212; }
-  .cart .wrapper {
-    margin-top: auto; }
-  .cart .cart-item-box {
-    border-right: 1px solid #121212;
-    margin-bottom: 0; }
+    .cart .wrapper {
+      margin-top: auto; }
+    .cart .cart-item-box {
+      border-right: 1px solid #121212;
+      margin-bottom: 0; }
   .discount-token {
     border-top: none; }
   .cart-buttons {

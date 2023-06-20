@@ -6,10 +6,8 @@
 }
 
 .section-heading{
-    color: $smokey-black;
+    @include textStyle($smokey-black, $fs-24, $fw-500);
     margin-bottom: 30px;
-    font-size: $fs-24;
-    font-weight: $fw-500;
 }
 
 .payment-form{
@@ -21,34 +19,29 @@
     align-items: center;
     gap: 30px;
     margin-bottom: 40px;
-}
-
-.payment-method .method{
-    border: 1px solid $quick-silver;
-    border-radius: $radius;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
-    gap: 20px;
-    cursor: pointer;
-}
-
-.payment-method .selected{
-    border-color: $tan-crayola;
-}
-
-.payment-method .method ion-icon{
-    font-size: 20px;
-}
-
-.payment-method .method .checkmark{
-    margin-left: auto;
-    color: $quick-silver;
-}
-
-.payment-method .method .fill{
-    color: $tan-crayola;
+    & .method{
+        width: 50%;
+        border: 1px solid $quick-silver;
+        border-radius: $radius;
+        display: flex;
+        align-items: center;
+        padding: 15px 30px;
+        gap: 20px;
+        cursor: pointer;
+        & ion-icon{
+            font-size: 20px;
+        }
+        & .checkmark{
+            margin-left: auto;
+            color: $quick-silver;
+        }
+        & .fill{
+            color: $tan-crayola;
+        }
+    }
+    & .selected{
+        border-color: $tan-crayola;
+    }  
 }
 
 .label-default{
@@ -91,10 +84,9 @@
 .expire-date .input-flex{
     color: $spanish-gray;
     gap: 13px;
-}
-
-.expire-date .input-flex input{
-    text-align: center;
+    & input{
+        text-align: center;
+    }
 }
 
 .btn{
@@ -103,17 +95,15 @@
     align-items: center;
     width: 40%;
     border-radius: $radius;
-}
-
-.btn:active{
-    transform: scale(0.99);
-}
-
-.btn:focus{
-    color: $white;
-    background: $tan-crayola;
-    outline: 2x solid $manatee;
-    outline-offset: 2px;
+    &:active{
+        transform: scale(0.99);
+    }
+    &:focus{
+        color: $white;
+        background: $tan-crayola;
+        outline: 2x solid $manatee;
+        outline-offset: 2px;
+    }
 }
 
 .btn-primary{
@@ -121,10 +111,9 @@
     font-weight: $fw-500;
     color: $white;
     padding: 13px 45px;
-}
-
-.btn-primary b{
-    margin-right: 13px;
+    b{
+        margin-right: 13px;
+    }
 }
 
 .cart-buttons{

@@ -6,10 +6,12 @@
     left: 0;
     padding-block: 15px;
     z-index: 4;
-}
-
-.header .input-wrapper{
-    display: none;
+    & .input-wrapper{
+        display: none;
+    }
+    & .container{
+        @include flexbox(space-between, center, 20px);
+    }  
 }
 
 /* Clase aplicada en js */
@@ -23,13 +25,6 @@
 @keyframes slideIn{
     0% {transform: translateY(-100%);}
     100% {transform: translateY(0);}
-}
-
-.header .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px; 
 }
 
 .logo{
@@ -46,22 +41,18 @@
     position: relative;
     font-size: 24px;
     transition: $transition-1;
+    &:is(:hover, :focus){
+        color: $tan-crayola;
+    }
+    & .btn-badge{
+        background-color: $tan-crayola;
+        @include dimensions(18px, 18px);
+        @include textStyle($white, $fs-cart-notif, $fw-500);
+        position: absolute;
+        bottom: -8px;
+        right: -10px;
+        border-radius: 16px;
+        text-align: center;
+    } 
 }
 
-.header-action-btn:is(:hover, :focus){
-    color: $tan-crayola;
-}
-
-.header-action-btn .btn-badge{
-    width: 18px;
-    height: 18px;
-    background-color: $tan-crayola;
-    color: $white;
-    font-size: $fs-cart-notif;
-    font-weight: $fw-500;
-    position: absolute;
-    bottom: -8px;
-    right: -10px;
-    border-radius: 16px;
-    text-align: center;
-}
