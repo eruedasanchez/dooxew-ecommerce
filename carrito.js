@@ -1,5 +1,3 @@
-import products from './data.json' assert{type: 'json'}; // Consumir datos de la API local
-
 /**** Verificacion del local Storage para chequear si hay productos cargados en el carrito ****/ 
 
 const CERO = 0;
