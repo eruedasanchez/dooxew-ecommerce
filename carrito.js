@@ -89,30 +89,36 @@ const refreshTotal = () => {
             total.innerText = `${totalAmmount}` - `${totalAmmount}` * TENPERCENT;
             discountHasApplied = true;
             
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Felicitaciones! Descuento del 10% aplicado',
-                showConfirmButton: false,
-                timer: 3000
-            })
+            setTimeout(() => {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Felicitaciones! Descuento del 10% aplicado',
+                    showConfirmButton: false,
+                    timer: 3000
+                })
+            }, 1500)
         } else if(discountToken.value == "CODER-JS-2023"){
-            Swal.fire({
-                position: 'top-end',
-                icon: 'warning',
-                title: 'Su gift card ya fue utilizada',
-                showConfirmButton: false,
-                timer: 2000
-            })
+            setTimeout(() => {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'warning',
+                    title: 'Su gift card ya fue utilizada!',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+            }, 1500)
                 
         } else {
-            Swal.fire({
-                position: 'top-end',
-                icon: 'error',
-                title: 'Codigo incorrecto',
-                showConfirmButton: false,
-                timer: 2000
-            })
+            setTimeout(() => {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Codigo incorrecto',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+            }, 1500)
         }
     });
 }
@@ -159,12 +165,14 @@ payBtn.addEventListener("click", () => {
             confirmButtonText: 'Solicitar pedido'
         }).then((result) => {
             if (result.isConfirmed) {
-                Swal.fire(
-                    'Compra confirmada!',
-                    'Nos encontramos en Avenida Rivadavia 5700. Nuestros horarios de atencion son lunes a viernes de 9 a 18hs. Gracias por confiar en nostros',
-                    'success'
-                )
-                
+                setTimeout(() => {
+                    Swal.fire(
+                        'Compra confirmada!',
+                        'Nos encontramos en Avenida Rivadavia 5700. Nuestros horarios de atencion son lunes a viernes de 9 a 18hs. Gracias por confiar en nosotros',
+                        'success'
+                    )
+                }, 1000)
+
                 productsInBag.length = 0;
                 localStorage.setItem("products-in-bag", JSON.stringify(productsInBag));
 
