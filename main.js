@@ -1,64 +1,65 @@
 /* Define products in array products */
 
-class Product{
-    constructor(name, id, image, categoryName, categoryId, price){
-        this.name = name;
-        this.id = id;
-        this.image = image;
-        this.categoryName = categoryName;
-        this.categoryId = categoryId;
-        this.price = price;
-    }
-}
+// class Product{
+//     constructor(name, id, image, categoryName, categoryId, price){
+//         this.name = name;
+//         this.id = id;
+//         this.image = image;
+//         this.categoryName = categoryName;
+//         this.categoryId = categoryId;
+//         this.price = price;
+//     }
+// }
 
-const products = [];
+// const products = [];
 
-const firstAccesory = new Product("Art Deco Home", "accesory-01", "./assets/img/accesory-01.jpg", "accesory", "accesories", 30);
-const secondAccesory = new Product("Dark Green Jug", "accesory-02", "./assets/img/accesory-02.jpg", "accesory", "accesories", 17);
-const thirdAccesory = new Product("Drinking Glasses", "accesory-03", "./assets/img/accesory-03.jpg", "accesory", "accesories", 21); 
-const fourthAccesory = new Product("High Quality Glass Bottle", "accesory-04", "./assets/img/accesory-04.jpg", "accesory", "accesories", 30);
-const fifthAccesory = new Product("Living Room & Bedroom Lights", "accesory-05", "./assets/img/accesory-05.jpg", "accesory", "accesories", 45);
-const sixthAccesory = new Product("Teapot With Black Tea", "accesory-06", "./assets/img/accesory-06.jpg", "accesory", "accesories", 25);
-const seventhAccesory = new Product("Wooden Cups", "accesory-07", "./assets/img/accesory-07.jpg", "accesory", "accesories", 29);
+// const firstAccesory = new Product("Art Deco Home", "accesory-01", "./assets/img/accesory-01.jpg", "accesory", "accesories", 30);
+// const secondAccesory = new Product("Dark Green Jug", "accesory-02", "./assets/img/accesory-02.jpg", "accesory", "accesories", 17);
+// const thirdAccesory = new Product("Drinking Glasses", "accesory-03", "./assets/img/accesory-03.jpg", "accesory", "accesories", 21); 
+// const fourthAccesory = new Product("High Quality Glass Bottle", "accesory-04", "./assets/img/accesory-04.jpg", "accesory", "accesories", 30);
+// const fifthAccesory = new Product("Living Room & Bedroom Lights", "accesory-05", "./assets/img/accesory-05.jpg", "accesory", "accesories", 45);
+// const sixthAccesory = new Product("Teapot With Black Tea", "accesory-06", "./assets/img/accesory-06.jpg", "accesory", "accesories", 25);
+// const seventhAccesory = new Product("Wooden Cups", "accesory-07", "./assets/img/accesory-07.jpg", "accesory", "accesories", 29);
 
-const firstDecoration = new Product("Animi Dolor Pariatur", "decoration-01", "./assets/img/decoration-01.jpg", "decoration", "decorations", 10);
-const secondDecoration = new Product("Artificial Potted Plant", "decoration-02", "./assets/img/decoration-02.jpg", "decoration", "decorations", 40);
-const thirdDecoration = new Product("Smooth Disk", "decoration-03", "./assets/img/decoration-03.jpg", "decoration", "decorations", 46);
-const fourthDecoration = new Product("Unique Decoration", "decoration-04", "./assets/img/decoration-04.jpg", "decoration", "decorations", 15);
-const fifthecoration = new Product("Vase Of Flowers", "decoration-05", "./assets/img/decoration-05.jpg", "decoration", "decorations", 77);
-const sixthDecoration = new Product("Wood Eggs", "decoration-06", "./assets/img/decoration-06.jpg", "decoration", "decorations", 19);
-const seventhDecoration = new Product("Wooden Box", "decoration-07", "./assets/img/decoration-07.jpg", "decoration", "decorations", 27);
+// const firstDecoration = new Product("Animi Dolor Pariatur", "decoration-01", "./assets/img/decoration-01.jpg", "decoration", "decorations", 10);
+// const secondDecoration = new Product("Artificial Potted Plant", "decoration-02", "./assets/img/decoration-02.jpg", "decoration", "decorations", 40);
+// const thirdDecoration = new Product("Smooth Disk", "decoration-03", "./assets/img/decoration-03.jpg", "decoration", "decorations", 46);
+// const fourthDecoration = new Product("Unique Decoration", "decoration-04", "./assets/img/decoration-04.jpg", "decoration", "decorations", 15);
+// const fifthDecoration = new Product("Vase Of Flowers", "decoration-05", "./assets/img/decoration-05.jpg", "decoration", "decorations", 77);
+// const sixthDecoration = new Product("Wood Eggs", "decoration-06", "./assets/img/decoration-06.jpg", "decoration", "decorations", 19);
+// const seventhDecoration = new Product("Wooden Box", "decoration-07", "./assets/img/decoration-07.jpg", "decoration", "decorations", 27);
 
-const firstFurniture = new Product("Helen Chair", "furniture-01", "./assets/img/furniture-01.jpg", "furniture", "furnitures", 69);
-const secondFurniture = new Product("Nancy Chair", "furniture-02", "./assets/img/furniture-02.jpg", "furniture", "furnitures", 90);
-const thirdFurniture = new Product("Simple Chair", "furniture-03", "./assets/img/furniture-03.jpg", "furniture", "furnitures", 40);
-const fourthFurniture = new Product("Table Black", "furniture-04", "./assets/img/furniture-04.jpg", "furniture", "furnitures", 67);
-const fifthFurniture = new Product("Table Wood Pine", "furniture-05", "./assets/img/furniture-05.jpg", "furniture", "furnitures", 50);
+// const firstFurniture = new Product("Helen Chair", "furniture-01", "./assets/img/furniture-01.jpg", "furniture", "furnitures", 69);
+// const secondFurniture = new Product("Nancy Chair", "furniture-02", "./assets/img/furniture-02.jpg", "furniture", "furnitures", 90);
+// const thirdFurniture = new Product("Simple Chair", "furniture-03", "./assets/img/furniture-03.jpg", "furniture", "furnitures", 40);
+// const fourthFurniture = new Product("Table Black", "furniture-04", "./assets/img/furniture-04.jpg", "furniture", "furnitures", 67);
+// const fifthFurniture = new Product("Table Wood Pine", "furniture-05", "./assets/img/furniture-05.jpg", "furniture", "furnitures", 50);
 
-products.push(firstDecoration);
-products.push(firstAccesory);
-products.push(secondDecoration);
-products.push(secondAccesory);
+// products.push(firstDecoration);
+// products.push(firstAccesory);
+// products.push(secondDecoration);
+// products.push(secondAccesory);
 
-products.push(thirdAccesory);
-products.push(firstFurniture);
-products.push(fourthAccesory);
-products.push(fifthAccesory);
+// products.push(thirdAccesory);
+// products.push(firstFurniture);
+// products.push(fourthAccesory);
+// products.push(fifthAccesory);
 
-products.push(secondFurniture);
-products.push(thirdFurniture);
-products.push(thirdDecoration);
-products.push(fourthFurniture);
+// products.push(secondFurniture);
+// products.push(thirdFurniture);
+// products.push(thirdDecoration);
+// products.push(fourthFurniture);
 
-products.push(fifthFurniture);
-products.push(sixthAccesory);
-products.push(fourthDecoration);
-products.push(fifthecoration);
+// products.push(fifthFurniture);
+// products.push(sixthAccesory);
+// products.push(fourthDecoration);
+// products.push(fifthDecoration);
 
-products.push(sixthDecoration);
-products.push(seventhDecoration);
-products.push(seventhAccesory);
+// products.push(sixthDecoration);
+// products.push(seventhDecoration);
+// products.push(seventhAccesory);
 
+import products from './data.json' assert{type: 'json'};
 
 const btnCategory = document.querySelectorAll(".filter-btn");
 const productsContainer = document.querySelector("#data-filter");
@@ -90,10 +91,6 @@ function addToBag(event){
     localStorage.setItem("products-in-bag", JSON.stringify(productsInBag));
 }
 
-
-
-
-
 /**** Refresh quantity ****/
 
 const refreshQuantity = () => {
@@ -113,8 +110,7 @@ const refreshAddBtn = () => {
 /* Load products */ 
 
 const load = (productsChosen) => {
-    productsContainer.innerHTML = "";           // Vacia el contenedor para que no vaya acumulando las categorias filtradas dado que se le aplica un append 
-    
+    productsContainer.innerHTML = "";           // Vacia el contenedor para que no vaya acumulando las categorias filtradas dado que se le aplica un append
     productsChosen.forEach(product => {
         const li = document.createElement("li");
         const productCat = product.categoryName; 
@@ -231,10 +227,9 @@ const load = (productsChosen) => {
         productsContainer.append(li);
     })
     refreshAddBtn();
-}
+} 
 
 /************************************************** END FUNCTIONS ***************************************************/
-
 load(products);
 
 /***** Navbar toggle *****/
@@ -339,11 +334,6 @@ if(productsInBagLocalStorage){
 } else {
     productsInBag = [];
 }
-
-
-
-
-
 
 
 
