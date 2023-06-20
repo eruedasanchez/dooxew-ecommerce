@@ -33,7 +33,7 @@ function uploadPurchaseOrder(){
             div.classList.add("card");   
             div.innerHTML = `
             <div class="img-box">
-                <img src="${product.image}" alt="${product.name}" width="80px" class="cart-img product-img">
+                <img src="../assets/img/${product.id}.jpg" alt="${product.name}" width="80px" class="cart-img product-img">
             </div>
             <div class="detail">
                 <h4 class="product-name">${product.name}</h4>

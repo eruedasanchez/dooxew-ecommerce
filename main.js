@@ -59,7 +59,7 @@ const load = (productsChosen) => {
             li.innerHTML = `
             <div class="product-card">
                 <div class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                    <img src="./assets/img/${product.id}.jpg" width="300" height="300" loading="lazy" alt="${product.name}" class="img-cover">
+                    <img src="${product.image}" width="300" height="300" loading="lazy" alt="${product.name}" class="img-cover">
                     <ul class="card-action-list">
                         <li>
                             <button class="card-action-btn">
@@ -104,7 +104,7 @@ const load = (productsChosen) => {
             li.innerHTML = `
             <div class="product-card">
                 <div class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                    <img src="./assets/img/${product.id}.jpg" width="300" height="300" loading="lazy" alt="${product.name}" class="img-cover">
+                    <img src="${product.image}" width="300" height="300" loading="lazy" alt="${product.name}" class="img-cover">
                     <ul class="card-action-list">
                         <li>
                             <button class="card-action-btn">
@@ -135,7 +135,7 @@ const load = (productsChosen) => {
             li.innerHTML = `
                 <div class="product-card">
                     <div class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
-                        <img src="./assets/img/${product.id}.jpg" width="300" height="300" loading="lazy" alt="${product.name}" class="img-cover">
+                        <img src="${product.image}" width="300" height="300" loading="lazy" alt="${product.name}" class="img-cover">
                         <ul class="card-action-list">
                             <li>
                                 <button class="card-action-btn">
